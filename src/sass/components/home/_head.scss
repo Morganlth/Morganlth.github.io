@@ -1,0 +1,51 @@
+/*----------------------------------------------- #||--head--|| */
+
+
+/* #\-USES-\ */
+
+    /* --SASS */
+
+    /* --GLOBAL */
+
+    /* --DEPENDENCIES */
+    @use '../../utils/font';
+
+    /* --MEDIA */
+    @use '../../media/media';
+
+
+/* #\-EXPORTS-\ */
+
+    /* --THIS */
+
+
+/* #\-VARIABLES-\ */
+
+    /* --* */
+
+
+/* #\-FUNCTIONS-\ */
+
+    /* --* */
+
+
+/* #\-MIXINS-\ */
+
+    /* --* */
+
+
+/* #\-PLACEHOLDERS-\ */
+
+    /* --* */
+
+
+/* #\-THIS-\ */
+
+#home .head h1
+{
+    @include font.txt($s: false, $t: 'b', $lh: 1.2);
+
+    @include media.mobile             { font-size: font.getSize(4); }
+
+    @include media.mobile($not: true) { font-size: font.getSize(6); }
+}

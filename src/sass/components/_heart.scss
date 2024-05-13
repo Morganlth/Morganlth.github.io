@@ -1,0 +1,72 @@
+/*----------------------------------------------- #||--heart--|| */
+
+
+/* #\-USES-\ */
+
+    /* --SASS */
+
+    /* --GLOBAL */
+
+    /* --DEPENDENCIES */
+
+    /* --MEDIA */
+
+
+/* #\-EXPORTS-\ */
+
+    /* --THIS */
+
+
+/* #\-VARIABLES-\ */
+
+    /* --* */
+
+
+/* #\-FUNCTIONS-\ */
+
+    /* --* */
+
+
+/* #\-MIXINS-\ */
+
+    /* --* */
+
+
+/* #\-PLACEHOLDERS-\ */
+
+    /* --* */
+
+
+/* #\-THIS-\ */
+
+.heart
+{
+    font-size: 2.2rem;
+
+    cursor: pointer;
+
+    input[type="checkbox"]:checked + i.fa-regular, i.fa-solid { opacity: 0; }
+
+    input[type="checkbox"]:checked + i.fa-regular
+    {
+        transform: scale(3);
+
+        transition: opacity .26s, transform .28s ease-out;
+    }
+
+    input[type="checkbox"]:checked + i.fa-regular + i.fa-solid
+    {
+        transform: scale(1);
+
+        opacity: 1;
+    }
+
+    i.fa-solid
+    {
+        transform: scale(-1);
+
+        background-clip: text;
+
+        transition: opacity .34s, transform .36s ease-out;
+    }
+}

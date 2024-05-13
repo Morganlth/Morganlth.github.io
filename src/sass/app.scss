@@ -1,0 +1,229 @@
+/*----------------------------------------------- #||--app--|| */
+
+
+/* #\-USES-\ */
+
+    /* --SASS */
+
+    /* --GLOBAL */
+    @use './global/vars'   as *;
+    @use './global/colors' as *;
+
+    /* --DEPENDENCIES */
+    @use './utils/utils';
+    @use './utils/font' ;
+
+    /* --MEDIA */
+    @use './media/media';
+
+    /* --COMPONENTS */
+
+        /* --GLOBAL */
+        @use './components/button';
+        @use './components/footer';
+        @use './components/header';
+        @use './components/heart' ;
+
+        /* --HOME */
+        @use './components/home/head'       ;
+        @use './components/home/location'   ;
+        @use './components/home/restaurants';
+        @use './components/home/tuto'       ;
+
+        /* --MENU */
+        @use './components/menu/banner' ;
+        @use './components/menu/content';
+
+
+/* #\-EXPORTS-\ */
+
+    /* --THIS */
+
+
+/* #\-VARIABLES-\ */
+
+    /* --* */
+
+/* #\-FUNCTIONS-\ */
+
+    /* --* */
+
+
+/* #\-MIXINS-\ */
+
+    /* --* */
+
+
+/* #\-PLACEHOLDERS-\ */
+
+    /* --* */
+    %reset
+    {
+        body, h1, h2, h3, h4, h5, h6, ul, ol, p, figure, blockquote, pre, form, select, option { margin : 0; }
+        ul, ol, button, input, textarea, option                                                { padding: 0; }
+
+        li:not(.dft) { list-style: none; }
+
+        a:not(a[draggable]), img { @extend %no_drag; }
+
+        a:not(.dft) { text-decoration: none; }
+
+        button, input, textarea, select, frame { border: none; }
+
+        button, select { cursor: pointer; }
+
+        input, textarea
+        {
+            border-radius: 0;
+    
+            outline: none;
+        }
+    }
+
+    %set
+    {
+        &, body
+        {
+            scroll-behavior    : smooth;
+            overscroll-behavior: none;
+    
+            user-select: none;
+        }
+
+        &:not(&.o_hid) { overflow: hidden overlay !important; }
+
+        // @include media.mobile
+        // {
+        //     font-size: 46.875%; // 1.6rem => 12px
+        // }
+
+        // @include media.tablet
+        // {
+        //     font-size: 54.6875%; // 1.6rem => 14px
+        // }
+    
+        // @include media.desktop
+        // {
+            font-size: 62.5%; // 1.6rem => 16px
+        // }
+    }
+
+    %fonts // TLT, TXT_BLD, TXT, TXT_SCD
+    {
+        @font-face
+        {
+            font-family: 'TLT';
+            src        : local('Shrikhand-Regular'), local('Shrikhand'),
+                         url('/static/fonts/Shrikhand/Shrikhand-Regular.ttf') format('truetype')
+            ;
+        }
+
+        @font-face // 700
+        {
+            font-family: 'TLT_BLD';
+            src        : local('Roboto-Bold'), local('Roboto'),
+                         url('/static/fonts/Roboto/Roboto-Bold.ttf') format('truetype')
+            ;
+        }
+
+        @font-face // 500
+        {
+            font-family: 'TXT';
+            src        : local('Roboto-Medium'), local('Roboto'),
+                         url('/static/fonts/Roboto/Roboto-Medium.ttf') format('truetype')
+            ;
+        }
+
+        @font-face // 300
+        {
+            font-family: 'TXT_LGH';
+            src        : local('Roboto-Light'), local('Roboto'),
+                         url('/static/fonts/Roboto/Roboto-Light.ttf') format('truetype')
+            ;
+        }
+    }
+
+
+/* #\-THIS-\ */
+
+html
+{
+    @extend %reset;
+    @extend %set  ;
+    @extend %fonts;
+
+    &::before
+    {
+        @include utils.constructor(p_abs, t_0, l_0, z_-1, o_0);
+
+        content: '**AUTHOR: LE THUAUT Morgan';
+    }
+}
+
+@each $name, $property, $value in utils.$placeholders { .#{$name} { @extend %#{$name}; } }
+
+/* #\-CUSTOM CLASS-\ */
+
+.max_w { @include media.mobile($not: true) { max-width: $max_WIDTH*1vw; } }
+
+.b_grd { background: linear-gradient(193.33deg, $prm2 -11.44%, $prm1 123.93%); }
+
+.brdr_1 { border-radius: 1.5rem; }
+.brdr_2 { border-radius:   2rem; }
+.brdr_3 { border-radius: 2.5rem; }
+
+.shadow_1 { box-shadow: 0 4px 10px rgba($drk3, .25); }
+.shadow_2 { box-shadow: 0 4px 15px rgba($drk3, .15); }
+.shadow_3 { box-shadow: 0 4px 15px rgba($drk3, .10); }
+ 
+.tlt_3 { @include font.tlt($s: 3); }
+.tlt_5 { @include font.tlt($s: 5); }
+
+.txt_3_bld { @include font.txt($s: 3, $t: 'b', $lh: 1  ); }
+.txt_4_bld { @include font.txt($s: 4, $t: 'b', $lh: 1.2); }
+
+.txt_1 { @include font.txt($s: 1, $lh:  .8); }
+.txt_2 { @include font.txt($s: 2, $lh: 1.1); }
+.txt_3 { @include font.txt($s: 3, $lh: 1.2); }
+
+.txt_2_lgh { @include font.txt($s: 2, $t: 'l', $lh: 1.1); }
+.txt_3_lgh { @include font.txt($s: 3, $t: 'l', $lh: 1.1); }
+
+// .f_bld
+// {
+//     font-family: font.$txt_BLD, font.$txt_DFT;
+//     font-weight: bold                        ;
+// }
+
+.select_txt { &::selection, &>*::selection { @include utils.constructor(b_prm1, c_prm2); } }
+
+.scroll_bar
+{
+    &::-webkit-scrollbar, &::-webkit-scrollbar-thumb { pointer-events: auto !important; }
+
+    &::-webkit-scrollbar
+    {
+        width : $scrollbar_SIZE;
+        height: $scrollbar_SIZE;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+        border: solid $scrollbar_SIZE*.3;
+
+        &:hover { @extend %brd_1; }
+    }
+
+    &:not(&.reverse)
+    {
+        &::-webkit-scrollbar { @extend %b_drk3; }
+
+        &::-webkit-scrollbar-thumb { @include utils.constructor(b_lgh1, brd_c_drk3); }
+    }
+    &.reverse
+    {
+        &::-webkit-scrollbar { @extend %b_lgh1; }
+
+        &::-webkit-scrollbar-thumb { @include utils.constructor(b_drk3, brd_c_lgh1); }
+    }
+}

@@ -1,0 +1,67 @@
+/*----------------------------------------------- #||--restaurants--|| */
+
+
+/* #\-USES-\ */
+
+    /* --SASS */
+
+    /* --GLOBAL */
+    @use '../../global/vars' as *;
+
+    /* --DEPENDENCIES */
+
+    /* --MEDIA */
+    @use '../../media/media';
+
+
+/* #\-EXPORTS-\ */
+
+    /* --THIS */
+
+
+/* #\-VARIABLES-\ */
+
+    /* --* */
+
+
+/* #\-FUNCTIONS-\ */
+
+    /* --* */
+
+
+/* #\-MIXINS-\ */
+
+    /* --* */
+
+
+/* #\-PLACEHOLDERS-\ */
+
+    /* --* */
+
+
+/* #\-THIS-\ */
+
+#home .restaurants .wrapper
+{
+    .card
+    {
+        img { aspect-ratio: 16 / 8; }
+
+        .new
+        {
+            top  : $g3;
+            right: $g3;
+
+            border-radius: 2px;
+        }
+
+        @include media.mobile { width: 100%; }
+    }
+
+    @include media.mobile($not: true)
+    {
+        gap: $g5 0;
+
+        .card { width: 45.37%; }
+    }
+}

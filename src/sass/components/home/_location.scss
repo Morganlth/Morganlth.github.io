@@ -1,0 +1,50 @@
+/*----------------------------------------------- #||--location--|| */
+
+
+/* #\-USES-\ */
+
+    /* --SASS */
+
+    /* --GLOBAL */
+    @use '../../global/vars'   as *;
+    @use '../../global/colors' as *;
+
+    /* --DEPENDENCIES */
+
+    /* --MEDIA */
+    @use '../../media/media';
+
+
+/* #\-EXPORTS-\ */
+
+    /* --THIS */
+
+
+/* #\-VARIABLES-\ */
+
+    /* --* */
+
+
+/* #\-FUNCTIONS-\ */
+
+    /* --* */
+
+
+/* #\-MIXINS-\ */
+
+    /* --* */
+
+
+/* #\-PLACEHOLDERS-\ */
+
+    /* --* */
+
+
+/* #\-THIS-\ */
+
+#home .location
+{
+    height: $g4 + $g3*2;
+
+    @include media.mobile { box-shadow: 0 4px 4px rgba($drk3, .25); }
+}

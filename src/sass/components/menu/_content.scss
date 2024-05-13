@@ -1,0 +1,84 @@
+/*----------------------------------------------- #||--content--|| */
+
+
+/* #\-USES-\ */
+
+    /* --SASS */
+
+    /* --GLOBAL */
+    @use '../../global/vars' as *;
+
+    /* --DEPENDENCIES */
+    @use '../../utils/utils';
+
+    /* --MEDIA */
+    @use '../../media/media';
+
+
+/* #\-EXPORTS-\ */
+
+    /* --THIS */
+
+
+/* #\-VARIABLES-\ */
+
+    /* --* */
+
+
+/* #\-FUNCTIONS-\ */
+
+    /* --* */
+
+
+/* #\-MIXINS-\ */
+
+    /* --* */
+
+
+/* #\-PLACEHOLDERS-\ */
+
+    /* --* */
+
+
+/* #\-THIS-\ */
+
+#menu .content
+{
+    &::before, article h2::after { content: ''; }
+
+    &::before
+    {
+        @include utils.constructor(p_abs, t_0, r_0, l_0, t_y-100, w_any, b_lgh2);
+
+        height: $g5;
+
+        border-top-left-radius : $g5;
+        border-top-right-radius: $g5;
+    }
+
+    article
+    {
+        h2::after
+        {
+            @include utils.constructor(p_abs, b_0, l_0, brd_c_scd1);
+
+            width: $g5;
+
+            border-bottom: solid $g1;
+        }
+
+        .price { align-self: end; }
+    }
+
+    @include media.desktop
+    {
+        padding-inline: $max_WIDTH*0.1995*1vw;
+
+        .head
+        {
+            justify-content: center;
+
+            padding-top: $g2;
+        }
+    }
+}

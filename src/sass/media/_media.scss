@@ -1,0 +1,161 @@
+/*----------------------------------------------- #||--media--|| */
+
+
+/* #\-USES-\ */
+
+    /* --SASS */
+    @use 'sass:list';
+    @use 'sass:map' ;
+
+    /* --GLOBAL */
+
+    /* --DEPENDENCIES */
+
+    /* --MEDIA */
+
+
+/* #\-EXPORTS-\ */
+
+    /* --THIS */
+
+
+/* #\-VARIABLES-\ */
+
+    /* --* */
+    $bp: (1: 320px, 2: 375px, 3: 425px, 4: 768px, 5: 1024px, 6: 1440px); // breakpoints
+
+    $frontier_POINT_WIDTH_1: 4;
+    $frontier_POINT_WIDTH_2: 6;
+    $frontier_POINT_HEIGHT : 3;
+
+
+/* #\-FUNCTIONS-\ */
+
+    /* --* */
+    @function getBreakpoint($p) { @return map.get($bp, $p); } // point
+
+    @function getMedia($v, $p, $t, $or) // value, property, type, or
+    {
+        $m: '';
+    
+        @if   type-of($v) == list { $m: getPropMinMax($p, $v, $or); }
+        @else                     { $m: getProp($t, $p, $v)       ; }
+
+        @return $m;
+    }
+
+    @function getProp($t, $p, $v) // type, property, value
+    {
+        @if $t == max { $v: $v - 1; }
+    
+        @return '(#{$t}-#{$p}: #{$v})';
+    }
+
+    @function getPropMinMax($p, $list, $or) // property, list, or
+    {
+        $m: '' ;
+        $t: min;
+    
+        @for $i from 1 through 2
+        {
+            $m: '#{$m} #{getProp($t, $p, list.nth($list, $i))}';
+
+            @if $i == 1
+            {
+                $m: testOr($m, $or);
+                $m: '#{$m} and'    ;
+                $t: max            ; 
+            }
+        }
+
+        @return $m;
+    }
+
+    @function testOr($m, $or) // media, or
+    {
+        @if $or { $m: '#{$m}, screen'; }
+
+        @return $m;
+    }
+
+
+/* #\-MIXINS-\ */
+
+    /* --* */
+    @mixin m($w: false, $h: false, $t: min, $or: false) // width, height, type, or
+    {
+        $m: '';
+    
+        @if $w
+        {
+            $m: getMedia($w, 'width', $t, $or);
+    
+            @if $h
+            {
+                $m: testOr($m, $or)                               ;
+                $m: '#{$m} and #{getMedia($h, 'height', $t, $or)}';
+            }
+        }
+        @else { $m: getMedia($h, 'height', $t, $or); }
+
+        @media screen and #{$m} { @content; }
+    }
+
+    @mixin small_height($not: false)
+    {
+        $t: max;
+
+        @if $not { $t: min; }
+    
+        @include m($h: getBreakpoint(3), $t: $t) { @content; }
+    }
+
+    @mixin mobile($not: false)
+    {
+        $t : max     ;
+        $or: not $not;
+
+        @if $not { $t: min; }
+    
+        @include m(getBreakpoint($frontier_POINT_WIDTH_1), getBreakpoint($frontier_POINT_HEIGHT), $t, $or) { @content; }
+    }
+
+    @mixin tablet($not: false)
+    {
+        $w1: 0px ;
+        $w2: 0px ;
+        $t : min ;
+        $or: $not;
+
+        @if $not
+        {
+            $w1: $frontier_POINT_WIDTH_2;
+            $w2: $frontier_POINT_WIDTH_1;
+            $t : max                    ;
+        }
+        @else
+        {
+            $w1: $frontier_POINT_WIDTH_1;
+            $w2: $frontier_POINT_WIDTH_2;
+        }
+    
+        @include m((getBreakpoint($w1), getBreakpoint($w2)), getBreakpoint($frontier_POINT_HEIGHT), $t, $or) { @content; }
+    }
+
+    @mixin desktop($not: false)
+    {
+        $t : min ;
+        $or: $not;
+
+        @if $not { $t: max; }
+    
+        @include m(getBreakpoint($frontier_POINT_WIDTH_2), getBreakpoint($frontier_POINT_HEIGHT), $t, $or) { @content; }
+    }
+
+
+/* #\-PLACEHOLDERS-\ */
+
+    /* --* */
+
+
+/* #\-THIS-\ */

@@ -1,0 +1,1081 @@
+/*----------------------------------------------- #||--app--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/*----------------------------------------------- #||--vars--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+/* #\-THIS-\ */
+/*----------------------------------------------- #||--colors--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+/* #\-THIS-\ */
+/* --DEPENDENCIES */
+/*----------------------------------------------- #||--app--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/*----------------------------------------------- #||--utils--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --APP */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+.d_non {
+  display: none;
+}
+
+.d_cts {
+  display: contents;
+}
+
+.d_flx {
+  display: flex;
+}
+
+.f_1 {
+  flex: 1;
+}
+
+.f_cl_ {
+  flex-direction: column;
+}
+
+.f_wrp {
+  flex-wrap: wrap;
+}
+
+.j_ctr {
+  justify-content: center;
+}
+
+.j_sbt {
+  justify-content: space-between;
+}
+
+.j_end {
+  justify-content: flex-end;
+}
+
+.a_ctr {
+  align-items: center;
+}
+
+.a_end {
+  align-items: flex-end;
+}
+
+.g_2 {
+  gap: 1rem;
+}
+
+.g_3 {
+  gap: 1.6rem;
+}
+
+.g_4 {
+  gap: 2.2rem;
+}
+
+.g_5 {
+  gap: 4.2rem;
+}
+
+html::before, .p_abs, #menu .content::before, #menu .content article h2::after {
+  position: absolute;
+}
+
+.p_rlt {
+  position: relative;
+}
+
+html::before, .t_0, #menu .content::before {
+  top: 0;
+}
+
+.r_0, #menu .content::before {
+  right: 0;
+}
+
+.b_0, #menu .content article h2::after {
+  bottom: 0;
+}
+
+html::before, .l_0, #menu .content::before, #menu .content article h2::after {
+  left: 0;
+}
+
+html::before, .z_-1 {
+  z-index: -1;
+}
+
+.z_1 {
+  z-index: 1;
+}
+
+.t_x-50 {
+  transform: translateX(-50%);
+}
+
+.t_y-100, #menu .content::before {
+  transform: translateY(-100%);
+}
+
+.o_hid {
+  overflow: hidden;
+}
+
+.o_h_a {
+  overflow: hidden auto;
+}
+
+.w_any, #menu .content::before {
+  width: 100%;
+}
+
+.w_fit {
+  width: fit-content;
+}
+
+.h_fit {
+  height: fit-content;
+}
+
+.op_c {
+  object-position: center;
+}
+
+.of_c {
+  object-fit: cover;
+}
+
+.m__aut {
+  margin-inline: auto;
+}
+
+.mb_1 {
+  margin-bottom: 0.3rem;
+}
+
+.mb_2 {
+  margin-bottom: 1rem;
+}
+
+.mb_3 {
+  margin-bottom: 1.6rem;
+}
+
+.mb_4 {
+  margin-bottom: 2.2rem;
+}
+
+.mb_5 {
+  margin-bottom: 4.2rem;
+}
+
+.pt_2 {
+  padding-top: 1rem;
+}
+
+.pt_3 {
+  padding-top: 1.6rem;
+}
+
+.pt_4 {
+  padding-top: 2.2rem;
+}
+
+.pt_5 {
+  padding-top: 4.2rem;
+}
+
+.pr_2 {
+  padding-right: 1rem;
+}
+
+.pr_3 {
+  padding-right: 1.6rem;
+}
+
+.pr_4 {
+  padding-right: 2.2rem;
+}
+
+.pr_5 {
+  padding-right: 4.2rem;
+}
+
+.pb_2 {
+  padding-bottom: 1rem;
+}
+
+.pb_3 {
+  padding-bottom: 1.6rem;
+}
+
+.pb_4 {
+  padding-bottom: 2.2rem;
+}
+
+.pb_5 {
+  padding-bottom: 4.2rem;
+}
+
+.pl_2 {
+  padding-left: 1rem;
+}
+
+.pl_3 {
+  padding-left: 1.6rem;
+}
+
+.pl_4 {
+  padding-left: 2.2rem;
+}
+
+.pl_5 {
+  padding-left: 4.2rem;
+}
+
+html::before, .o_0 {
+  opacity: 0;
+}
+
+.b_brd {
+  box-sizing: border-box;
+}
+
+.p_non {
+  pointer-events: none;
+}
+
+.b_lgh1, .scroll_bar:not(.scroll_bar.reverse)::-webkit-scrollbar-thumb, .scroll_bar.reverse::-webkit-scrollbar {
+  background-color: #FFFFFF;
+}
+
+.b_lgh2, #menu .content::before {
+  background-color: #F6F6F6;
+}
+
+.b_drk1 {
+  background-color: #353535;
+}
+
+.b_drk2 {
+  background-color: #101010;
+}
+
+.b_drk3, .scroll_bar:not(.scroll_bar.reverse)::-webkit-scrollbar, .scroll_bar.reverse::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+.b_itm1 {
+  background-color: #EAEAEA;
+}
+
+.b_itm2 {
+  background-color: #7E7E7E;
+}
+
+.b_prm1, .select_txt::selection, .select_txt > *::selection {
+  background-color: #FF79DA;
+}
+
+.b_prm2 {
+  background-color: #9356DC;
+}
+
+.b_scd1 {
+  background-color: #99E2D0;
+}
+
+.b_scd2 {
+  background-color: #008766;
+}
+
+.b_trt1 {
+  background-color: #89C8FA;
+}
+
+.b_trt2 {
+  background-color: #003A68;
+}
+
+.b_idc {
+  background-color: red;
+}
+
+.brd_1, .scroll_bar::-webkit-scrollbar-thumb:hover {
+  border: solid 1px  ;
+}
+
+.brd_c_lgh1, .scroll_bar.reverse::-webkit-scrollbar-thumb {
+  border-color: #FFFFFF    !important;
+}
+
+.brd_c_lgh2 {
+  border-color: #F6F6F6    !important;
+}
+
+.brd_c_drk1 {
+  border-color: #353535    !important;
+}
+
+.brd_c_drk2 {
+  border-color: #101010    !important;
+}
+
+.brd_c_drk3, .scroll_bar:not(.scroll_bar.reverse)::-webkit-scrollbar-thumb {
+  border-color: #000000    !important;
+}
+
+.brd_c_itm1 {
+  border-color: #EAEAEA    !important;
+}
+
+.brd_c_itm2 {
+  border-color: #7E7E7E    !important;
+}
+
+.brd_c_prm1 {
+  border-color: #FF79DA    !important;
+}
+
+.brd_c_prm2 {
+  border-color: #9356DC    !important;
+}
+
+.brd_c_scd1, #menu .content article h2::after {
+  border-color: #99E2D0    !important;
+}
+
+.brd_c_scd2 {
+  border-color: #008766    !important;
+}
+
+.brd_c_trt1 {
+  border-color: #89C8FA    !important;
+}
+
+.brd_c_trt2 {
+  border-color: #003A68    !important;
+}
+
+.brd_c_idc {
+  border-color: red     !important;
+}
+
+.c_lgh1 {
+  color: #FFFFFF;
+}
+
+.c_lgh2 {
+  color: #F6F6F6;
+}
+
+.c_drk1 {
+  color: #353535;
+}
+
+.c_drk2 {
+  color: #101010;
+}
+
+.c_drk3 {
+  color: #000000;
+}
+
+.c_itm1 {
+  color: #EAEAEA;
+}
+
+.c_itm2 {
+  color: #7E7E7E;
+}
+
+.c_prm1 {
+  color: #FF79DA;
+}
+
+.c_prm2, .select_txt::selection, .select_txt > *::selection {
+  color: #9356DC;
+}
+
+.c_scd1 {
+  color: #99E2D0;
+}
+
+.c_scd2 {
+  color: #008766;
+}
+
+.c_trt1 {
+  color: #89C8FA;
+}
+
+.c_trt2 {
+  color: #003A68;
+}
+
+.c_idc {
+  color: red;
+}
+
+.c_trp {
+  color: transparent;
+}
+
+.t_ctr {
+  text-align: center;
+}
+
+.ws_nowrp {
+  white-space: nowrap;
+}
+
+html a:not(a[draggable]), html img {
+  -webkit-user-drag: none;
+  -webkit-app-region: no-drag;
+}
+
+/* #\-THIS-\ */
+/* --DEPENDENCIES */
+/*----------------------------------------------- #||--font--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+.tlt_3, .tlt_5, .txt_3_bld, .txt_4_bld, .txt_1, .txt_2, .txt_3, .txt_2_lgh, .txt_3_lgh, #home .head h1 {
+  font-stretch: 100%;
+  text-indent: 0;
+  font-variant: normal;
+  font-kerning: normal;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  font-smooth: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  text-rendering: geometricPrecision;
+}
+
+/* #\-THIS-\ */
+/* --MEDIA */
+/*----------------------------------------------- #||--media--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+/* #\-THIS-\ */
+/* --COMPONENTS */
+/* --GLOBAL */
+/*----------------------------------------------- #||--button--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+/* #\-THIS-\ */
+.button {
+  min-width: 18.6rem;
+}
+
+/*----------------------------------------------- #||--app--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --MEDIA */
+/*----------------------------------------------- #||--footer--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+/* #\-THIS-\ */
+#footer {
+  gap: 2.2rem 10rem;
+  min-height: 114px;
+}
+#footer .nav {
+  gap: 1rem 4.2rem;
+}
+#footer .nav ul {
+  gap: 1rem 1.6rem;
+}
+#footer .nav ul .icon {
+  width: 11px;
+}
+@media screen and (max-width: 767px), screen and (max-height: 424px) {
+  #footer .nav, #footer .nav li {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (min-height: 425px) {
+  #footer {
+    flex-direction: row-reverse;
+    padding-block: 4.2rem;
+    padding-inline: 8rem;
+  }
+  #footer .nav {
+    justify-content: end;
+  }
+}
+
+/*----------------------------------------------- #||--app--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --MEDIA */
+/*----------------------------------------------- #||--header--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+/* #\-THIS-\ */
+#header .back i {
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 767px), screen and (max-height: 424px) {
+  #header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+@media screen and (min-width: 1440px) and (min-height: 425px) {
+  #header {
+    height: 9.6rem;
+  }
+}
+
+/*----------------------------------------------- #||--heart--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+/* #\-THIS-\ */
+.heart {
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+.heart input[type=checkbox]:checked + i.fa-regular, .heart i.fa-solid {
+  opacity: 0;
+}
+.heart input[type=checkbox]:checked + i.fa-regular {
+  transform: scale(3);
+  transition: opacity 0.26s, transform 0.28s ease-out;
+}
+.heart input[type=checkbox]:checked + i.fa-regular + i.fa-solid {
+  transform: scale(1);
+  opacity: 1;
+}
+.heart i.fa-solid {
+  transform: scale(-1);
+  background-clip: text;
+  transition: opacity 0.34s, transform 0.36s ease-out;
+}
+
+/* --HOME */
+/* --MEDIA */
+/*----------------------------------------------- #||--head--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+/* #\-THIS-\ */
+#home .head h1 {
+  line-height: 1.2;
+  font-family: "TXT_BLD", "TXT", "Courier New";
+  font-weight: 700;
+  font-synthesis-weight: auto;
+}
+@media screen and (max-width: 767px), screen and (max-height: 424px) {
+  #home .head h1 {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-height: 425px) {
+  #home .head h1 {
+    font-size: 4rem;
+  }
+}
+
+/*----------------------------------------------- #||--app--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --MEDIA */
+/*----------------------------------------------- #||--location--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+/* #\-THIS-\ */
+#home .location {
+  height: 5.4rem;
+}
+@media screen and (max-width: 767px), screen and (max-height: 424px) {
+  #home .location {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/*----------------------------------------------- #||--app--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --MEDIA */
+/*----------------------------------------------- #||--restaurants--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+/* #\-THIS-\ */
+#home .restaurants .wrapper .card img {
+  aspect-ratio: 16/8;
+}
+#home .restaurants .wrapper .card .new {
+  top: 1.6rem;
+  right: 1.6rem;
+  border-radius: 2px;
+}
+@media screen and (max-width: 767px), screen and (max-height: 424px) {
+  #home .restaurants .wrapper .card {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (min-height: 425px) {
+  #home .restaurants .wrapper {
+    gap: 4.2rem 0;
+  }
+  #home .restaurants .wrapper .card {
+    width: 45.37%;
+  }
+}
+
+/*----------------------------------------------- #||--app--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --MEDIA */
+/*----------------------------------------------- #||--tuto--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+/* #\-THIS-\ */
+#home .tuto .bubble {
+  margin-left: 1.2rem;
+}
+#home .tuto .bubble i {
+  height: min-content;
+}
+#home .tuto .bubble .marker {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+}
+@media screen and (max-width: 767px), screen and (max-height: 424px) {
+  #home .tuto .bubble {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (min-height: 425px) {
+  #home .tuto {
+    min-height: 228px;
+  }
+}
+
+/* --MENU */
+/*----------------------------------------------- #||--banner--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+/* #\-THIS-\ */
+#menu .banner img {
+  aspect-ratio: 15/11;
+  max-height: 383px;
+}
+
+/*----------------------------------------------- #||--app--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/*----------------------------------------------- #||--content--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+/* #\-THIS-\ */
+#menu .content::before, #menu .content article h2::after {
+  content: "";
+}
+#menu .content::before {
+  height: 4.2rem;
+  border-top-left-radius: 4.2rem;
+  border-top-right-radius: 4.2rem;
+}
+#menu .content article h2::after {
+  width: 4.2rem;
+  border-bottom: solid 0.3rem;
+}
+#menu .content article .price {
+  align-self: end;
+}
+@media screen and (min-width: 1440px) and (min-height: 425px) {
+  #menu .content {
+    padding-inline: 15.57297vw;
+  }
+  #menu .content .head {
+    justify-content: center;
+    padding-top: 1rem;
+  }
+}
+
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+html body, html h1, html h2, html h3, html h4, html h5, html h6, html ul, html ol, html p, html figure, html blockquote, html pre, html form, html select, html option {
+  margin: 0;
+}
+html ul, html ol, html button, html input, html textarea, html option {
+  padding: 0;
+}
+html li:not(.dft) {
+  list-style: none;
+}
+html a:not(.dft) {
+  text-decoration: none;
+}
+html button, html input, html textarea, html select, html frame {
+  border: none;
+}
+html button, html select {
+  cursor: pointer;
+}
+html input, html textarea {
+  border-radius: 0;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+html, html body {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  user-select: none;
+}
+html:not(html.o_hid) {
+  overflow: hidden overlay !important;
+}
+
+@font-face {
+  font-family: "TLT";
+  src: local("Shrikhand-Regular"), local("Shrikhand"), url("/static/fonts/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TLT_BLD";
+  src: local("Roboto-Bold"), local("Roboto"), url("/static/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TXT";
+  src: local("Roboto-Medium"), local("Roboto"), url("/static/fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TXT_LGH";
+  src: local("Roboto-Light"), local("Roboto"), url("/static/fonts/Roboto/Roboto-Light.ttf") format("truetype");
+}
+
+/* #\-THIS-\ */
+html::before {
+  content: "**AUTHOR: LE THUAUT Morgan";
+}
+
+/* #\-CUSTOM CLASS-\ */
+@media screen and (min-width: 768px) and (min-height: 425px) {
+  .max_w {
+    max-width: 78.06vw;
+  }
+}
+
+.b_grd {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+.brdr_1 {
+  border-radius: 1.5rem;
+}
+
+.brdr_2 {
+  border-radius: 2rem;
+}
+
+.brdr_3 {
+  border-radius: 2.5rem;
+}
+
+.shadow_1 {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.shadow_2 {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.shadow_3 {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tlt_3 {
+  font-size: 1.8rem;
+  line-height: 1;
+  font-family: "TLT", "sans-serif", "arial";
+  font-weight: normal;
+}
+
+.tlt_5 {
+  font-size: 2.8rem;
+  line-height: 1;
+  font-family: "TLT", "sans-serif", "arial";
+  font-weight: normal;
+}
+
+.txt_3_bld {
+  font-size: 1.8rem;
+  line-height: 1;
+  font-family: "TXT_BLD", "TXT", "Courier New";
+  font-weight: 700;
+  font-synthesis-weight: auto;
+}
+
+.txt_4_bld {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-family: "TXT_BLD", "TXT", "Courier New";
+  font-weight: 700;
+  font-synthesis-weight: auto;
+}
+
+.txt_1 {
+  font-size: 1.4rem;
+  line-height: 0.8;
+  font-family: "TXT", "TXT_LGH", "Courier New";
+  font-weight: 500;
+}
+
+.txt_2 {
+  font-size: 1.6rem;
+  line-height: 1.1;
+  font-family: "TXT", "TXT_LGH", "Courier New";
+  font-weight: 500;
+}
+
+.txt_3 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  font-family: "TXT", "TXT_LGH", "Courier New";
+  font-weight: 500;
+}
+
+.txt_2_lgh {
+  font-size: 1.6rem;
+  line-height: 1.1;
+  font-family: "TXT_LGH", "TXT", "Courier New";
+  font-weight: 300;
+}
+
+.txt_3_lgh {
+  font-size: 1.8rem;
+  line-height: 1.1;
+  font-family: "TXT_LGH", "TXT", "Courier New";
+  font-weight: 300;
+}
+
+.scroll_bar::-webkit-scrollbar, .scroll_bar::-webkit-scrollbar-thumb {
+  pointer-events: auto !important;
+}
+.scroll_bar::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+.scroll_bar::-webkit-scrollbar-thumb {
+  border: solid 0.3rem;
+}
+
+/*# sourceMappingURL=app.css.map */

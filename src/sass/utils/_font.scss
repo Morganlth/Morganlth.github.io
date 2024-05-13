@@ -1,0 +1,121 @@
+/*----------------------------------------------- #||--font--|| */
+
+
+/* #\-USES-\ */
+
+    /* --SASS */
+    @use 'sass:map' ;
+    @use 'sass:list';
+
+    /* --GLOBAL */
+
+    /* --DEPENDENCIES */
+    @use './utils';
+
+    /* --MEDIA */
+
+
+/* #\-EXPORTS-\ */
+
+    /* --THIS */
+
+
+/* #\-VARIABLES-\ */
+
+    /* --* */
+    $tlt_DFT: 'sans-serif', 'arial';
+    $tlt    : 'TLT'                ;
+
+    $txt_DFT: 'Courier New'       ;
+    $txt_BLD: 'TXT_BLD', 'TXT'    ;
+    $txt    : 'TXT'    , 'TXT_LGH';
+    $txt_LGH: 'TXT_LGH', 'TXT'    ;
+
+    $sizes: (0: 0rem, 1: 1.4rem, 2: 1.6rem, 3: 1.8rem, 4: 2.4rem, 5: 2.8rem, 6: 4rem, 7: 6, 8: 10, 9: 12.4);
+
+
+/* #\-FUNCTIONS-\ */
+
+    /* --* */
+    @function getSize($s: 0)
+    {
+        $size: map.get($sizes, $s);
+
+        @if $size == null                                  { $size: $s           ; }
+        @if type-of($size) == number and unit($size) == '' { $size: $size * 1vmax; }
+
+        @return $size;
+    }
+
+
+/* #\-MIXINS-\ */
+
+    /* --* */
+    @mixin constructor($c, $s, $fs, $ls, $lh) // color, font-size, font-style, letter-spacing, line-height
+    {
+        @if $c  { color         : $c         ; }
+        @if $s  { font-size     : getSize($s); }
+        @if $fs { font-style    : $fs        ; }
+        @if $ls { letter-spacing: $ls        ; }
+
+        line-height: $lh;
+    }
+
+    @mixin tlt($c: false, $s: 3, $fs: false, $ls: false, $lh: 1) // number, color, font-size, font-style, letter-spacing, line-height
+    {
+        @include constructor($c, $s, $fs, $ls, $lh);
+    
+        @extend %settings;
+
+        font-family: $tlt, $tlt_DFT;
+        font-weight: normal        ;
+    }
+
+    @mixin txt($c: false, $t: 'r', $s: 2, $fs: false, $ls: false, $lh: 1) // color, type (bold, regular, light), font-size, font-style, letter-spacing, line-height
+    {
+        @include constructor($c, $s, $fs, $ls, $lh);
+    
+        @extend %settings;
+
+        @if      $t == 'b'
+        {
+            font-family          : $txt_BLD, $txt_DFT;
+            font-weight          : 700               ;
+            font-synthesis-weight: auto              ;
+        }
+        @else if $t == 'r'
+        {
+            font-family: $txt, $txt_DFT;
+            font-weight: 500           ;
+        }
+        @else if $t == 'l'
+        {
+            font-family: $txt_LGH, $txt_DFT;
+            font-weight: 300               ;
+        }
+        @else { @debug 'font.txt: #{$t} ($t) is not a valid argument (b, r or l)'; }
+    }
+
+    @mixin stroke($c: inherit, $s: 1px) { text-shadow: $s $s $c, $s*-1 $s $c, $s*-1 $s*-1 $c, $s $s*-1 $c; }
+
+
+/* #\-PLACEHOLDERS-\ */
+
+    /* --* */
+    %settings
+    {
+        font-stretch           : 100%;
+        text-indent            : 0;
+        font-variant           : normal;
+        font-kerning           : normal;
+        font-feature-settings  : normal;
+        font-variation-settings: normal;
+        font-smooth            : antialiased;
+        -webkit-font-smoothing : antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-optical-sizing    : auto;
+        text-rendering         : geometricPrecision;
+    }
+
+
+/* #\-THIS-\ */

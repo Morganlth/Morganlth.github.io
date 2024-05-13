@@ -1,0 +1,73 @@
+/*----------------------------------------------- #||--footer--|| */
+
+
+/* #\-USES-\ */
+
+    /* --SASS */
+
+    /* --GLOBAL */
+    @use '../global/vars' as *;
+
+    /* --DEPENDENCIES */
+
+    /* --MEDIA */
+    @use '../media/media';
+
+
+/* #\-EXPORTS-\ */
+
+    /* --THIS */
+
+
+/* #\-VARIABLES-\ */
+
+    /* --* */
+
+
+/* #\-FUNCTIONS-\ */
+
+    /* --* */
+
+
+/* #\-MIXINS-\ */
+
+    /* --* */
+
+
+/* #\-PLACEHOLDERS-\ */
+
+    /* --* */
+
+
+/* #\-THIS-\ */
+
+#footer
+{
+    gap: $g4 10rem;
+
+    min-height: 114px;
+
+    .nav
+    {
+        gap: $g2 $g5;
+
+        ul
+        {
+            gap: $g2 $g3;
+
+            .icon { width: 11px; }
+        }
+
+        @include media.mobile { &, li { width: 100%; } }
+    }
+
+    @include media.mobile($not: true)
+    {
+        flex-direction: row-reverse;
+
+        padding-block : $g5;
+        padding-inline: 8rem;
+
+        .nav { justify-content: end; }
+    }
+}

@@ -1,0 +1,355 @@
+/*----------------------------------------------- #||--utils--|| */
+
+
+/* #\-USES-\ */
+
+    /* --SASS */
+    @use 'sass:math';
+
+    /* --GLOBAL */
+    @use '../global/vars'   as *;
+    @use '../global/colors' as *;
+
+    /* --APP */
+
+    /* --DEPENDENCIES */
+
+    /* --MEDIA */
+
+
+/* #\-EXPORTS-\ */
+
+    /* --THIS */
+
+
+/* #\-VARIABLES-\ */
+
+    /* --* */
+    $placeholders:
+    (
+        // DISPLAY
+        'd_non' display none        ,
+        'd_cts' display contents    ,
+        // 'd_blc' display block       ,
+        // 'd_il_' display inline      ,
+        // 'd_ilb' display inline-block,
+        // 'd_grd' display grid        ,
+        'd_flx' display flex        ,
+
+        // GRID & FLEX
+        'f_1' flex 1,
+
+        // 'fs_0' flex-shrink 0,
+
+        // 'f_rwr' flex-direction  row-reverse   ,
+        'f_cl_' flex-direction  column        ,
+        // 'f_clr' flex-direction  column-reverse,
+        'f_wrp' flex-wrap       wrap          ,
+        'j_ctr' justify-content center        ,
+        'j_sbt' justify-content space-between ,
+        'j_end' justify-content flex-end      ,
+        'a_ctr' align-items     center        ,
+        'a_end' align-items     flex-end      ,
+
+        // 'g_1' gap $g1,
+        'g_2' gap $g2,
+        'g_3' gap $g3,
+        'g_4' gap $g4,
+        'g_5' gap $g5,
+
+        // POSITION
+        // 'p_fxd' position fixed   ,
+        'p_abs' position absolute,
+        'p_rlt' position relative,
+        // 'p_stk' position sticky  ,
+
+        't_0' top    0,
+        'r_0' right  0,
+        'b_0' bottom 0,
+        'l_0' left   0,
+
+        // 't_50' top    50%,
+        // 'r_50' right  50%,
+        // 'b_50' bottom 50%,
+        // 'l_50' left   50%,
+
+        // 't_100' top    100%,
+        // 'r_100' right  100%,
+        // 'b_100' bottom 100%,
+        // 'l_100' left   100%,
+
+        // 'z_-3' z-index -3,
+        // 'z_-2' z-index -2,
+        'z_-1' z-index -1,
+        // 'z_0'  z-index 0 ,
+        'z_1'  z-index 1 ,
+        // 'z_2'  z-index 2 ,
+        // 'z_3'  z-index 3 ,
+
+        // TRANSFORM
+        // 't_p3d' transform-style preserve-3d,
+
+        // 't_x50' transform translateX(50%),
+        // 't_y50' transform translateY(50%),
+
+        // 't_x100' transform translateX(100%),
+        // 't_y100' transform translateY(100%),
+
+        // 't_-50'  transform translate(-50%, -50%),
+        't_x-50' transform translateX(-50%)     ,
+        // 't_y-50' transform translateY(-50%)     ,
+
+        // 't_-100'  transform translate(-100%, -100%),
+        // 't_x-100' transform translateX(-100%)      ,
+        't_y-100' transform translateY(-100%)      ,
+
+        // 't_180' transform rotate(180deg),
+
+        // 't_sc1' transform scale(1),
+
+        // OVERFLOW
+        // 'o_aut' overflow auto         ,
+        'o_hid' overflow hidden       ,
+        'o_h_a' overflow 'hidden auto',
+
+        // WIDTH
+        // 'w_ful' width 100vw      ,
+        'w_any' width 100%       ,
+        'w_fit' width fit-content,
+        
+        // 'min_w_ful' min-width 100vw,
+        // 'min_w_any' min-width 100% ,
+        // 'max_w_ful' max-width 100vw,
+        // 'max_w_any' max-width 100% ,
+
+        // HEIGHT
+        // 'h_ful' height 100vh      ,
+        // 'h_lvh' height 100lvh     ,
+        // 'h_svh' height 100svh     ,
+        // 'h_dvh' height 100dvh     ,
+        // 'h_any' height 100%       ,
+        'h_fit' height fit-content,
+
+        // 'min_h_ful' min-height 100vh,
+        // 'min_h_any' min-height 100% ,
+        // 'max_h_ful' max-height 100vh,
+        // 'max_h_any' max-height 100% ,
+
+        // OBJECT
+        'op_c' object-position center,
+    
+        'of_c' object-fit cover,
+
+        // MARGIN
+        'm__aut' margin-inline auto,
+
+        // 'mt_1' margin-top $g1,
+        // 'mt_2' margin-top $g2,
+        // 'mt_3' margin-top $g3,
+        // 'mt_4' margin-top $g4,
+        // 'mt_5' margin-top $g5,
+
+        // 'mr_1' margin-right $g1,
+        // 'mr_2' margin-right $g2,
+        // 'mr_3' margin-right $g3,
+        // 'mr_4' margin-right $g4,
+        // 'mr_5' margin-right $g5,
+
+        'mb_1' margin-bottom $g1,
+        'mb_2' margin-bottom $g2,
+        'mb_3' margin-bottom $g3,
+        'mb_4' margin-bottom $g4,
+        'mb_5' margin-bottom $g5,
+
+        // 'ml_1' margin-left $g1,
+        // 'ml_2' margin-left $g2,
+        // 'ml_3' margin-left $g3,
+        // 'ml_4' margin-left $g4,
+        // 'ml_5' margin-left $g5,
+
+        // PADDING
+        // 'pt_1' padding-top $g1,
+        'pt_2' padding-top $g2,
+        'pt_3' padding-top $g3,
+        'pt_4' padding-top $g4,
+        'pt_5' padding-top $g5,
+
+        // 'pr_1' padding-right $g1,
+        'pr_2' padding-right $g2,
+        'pr_3' padding-right $g3,
+        'pr_4' padding-right $g4,
+        'pr_5' padding-right $g5,
+
+        // 'pb_1' padding-bottom $g1,
+        'pb_2' padding-bottom $g2,
+        'pb_3' padding-bottom $g3,
+        'pb_4' padding-bottom $g4,
+        'pb_5' padding-bottom $g5,
+
+        // 'pl_1' padding-left $g1,
+        'pl_2' padding-left $g2,
+        'pl_3' padding-left $g3,
+        'pl_4' padding-left $g4,
+        'pl_5' padding-left $g5,
+
+        // OPACITY
+        'o_0' opacity 0,
+        // 'o_1' opacity 1,
+
+        // BOX
+        'b_brd' box-sizing border-box ,
+        // 'b_ctn' box-sizing content-box,
+
+        // POINTER EVENTS
+        // 'p_aut' pointer-events auto,
+        'p_non' pointer-events none,
+
+        // BACKGROUND
+        'b_lgh1' background-color $lgh1      ,
+        'b_lgh2' background-color $lgh2      ,
+        'b_drk1' background-color $drk1      ,
+        'b_drk2' background-color $drk2      ,
+        'b_drk3' background-color $drk3      ,
+        'b_itm1' background-color $itm1      ,
+        'b_itm2' background-color $itm2      ,
+        'b_prm1' background-color $prm1      ,
+        'b_prm2' background-color $prm2      ,
+        'b_scd1' background-color $scd1      ,
+        'b_scd2' background-color $scd2      ,
+        'b_trt1' background-color $trt1      ,
+        'b_trt2' background-color $trt2      ,
+        'b_idc'  background-color $idc       ,
+        // 'b_trp'  background-color transparent,
+        // 'b_hrt'  background-color inherit    ,
+
+        // BLEND MODE
+        // 'bm_dif' mix-blend-mode difference,
+
+        // BORDER
+        'brd_1' border 'solid 1px  ',
+        // 'brd_2' border 'solid .3rem',
+        // 'brd_3' border 'solid 1rem ',
+
+        'brd_c_lgh1' border-color '#{$lgh1}    !important',
+        'brd_c_lgh2' border-color '#{$lgh2}    !important',
+        'brd_c_drk1' border-color '#{$drk1}    !important',
+        'brd_c_drk2' border-color '#{$drk2}    !important',
+        'brd_c_drk3' border-color '#{$drk3}    !important',
+        'brd_c_itm1' border-color '#{$itm1}    !important',
+        'brd_c_itm2' border-color '#{$itm2}    !important',
+        'brd_c_prm1' border-color '#{$prm1}    !important',
+        'brd_c_prm2' border-color '#{$prm2}    !important',
+        'brd_c_scd1' border-color '#{$scd1}    !important',
+        'brd_c_scd2' border-color '#{$scd2}    !important',
+        'brd_c_trt1' border-color '#{$trt1}    !important',
+        'brd_c_trt2' border-color '#{$trt2}    !important',
+        'brd_c_idc'  border-color '#{$idc}     !important',
+        // 'brd_c_trp'  border-color 'transparent !important',
+        // 'brd_c_hrt'  border-color 'inherit     !important',
+
+        // TEXT
+        'c_lgh1' color $lgh1,
+        'c_lgh2' color $lgh2,
+        'c_drk1' color $drk1,
+        'c_drk2' color $drk2,
+        'c_drk3' color $drk3,
+        'c_itm1' color $itm1,
+        'c_itm2' color $itm2,
+        'c_prm1' color $prm1,
+        'c_prm2' color $prm2,
+        'c_scd1' color $scd1,
+        'c_scd2' color $scd2,
+        'c_trt1' color $trt1,
+        'c_trt2' color $trt2,
+        'c_idc'  color $idc ,
+        'c_trp' color transparent,
+        // 'c_hrt' color inherit    ,
+
+        // 'f_hrt' font inherit,
+
+        // 'w_brk' word-break break-word,
+
+        't_ctr' text-align center ,
+        // 't_rgt' text-align right  ,
+        // 't_lft' text-align left   ,
+        // 't_jtf' text-align justify,
+
+        // 'lh_1' line-height '1 !important',
+
+        'ws_nowrp' white-space nowrap  ,
+        // 'ws_prwrp' white-space pre-wrap,
+
+        // 'u_txt' user-select text
+    );
+
+
+/* #\-FUNCTIONS-\ */
+
+    /* --* */
+    @function strip_units($n) { @return $n / ($n * 0 + 1); } // number
+
+
+/* #\-MIXINS-\ */
+
+    /* --* */
+    @mixin constructor($args...) { @each $p in $args { @extend %#{$p}; } } // placeholder arguments
+
+    @mixin grid($w: false, $h: false, $c: 1, $r: 1, $g: 0%) // width, height, columns, rows, gap (column)
+    {
+        @if $w
+        {
+            @if type-of($w) == list { grid-template-columns: $w            ; }
+            @else                   { grid-template-columns: repeat($c, $w); }
+        }
+        @else if $c { @include gtc($c, $g); }
+
+        @if $h
+        {
+            @if type-of($h) == list { grid-template-rows: $h            ; }
+            @else                   { grid-template-rows: repeat($r, $h); }
+        }
+        @else if $r { @include gtr($r, $g); }
+    }
+
+    @mixin gtc($c: 1, $g: 0%) // columns, gap
+    {
+        grid-template-columns: repeat($c, math.div(100%, $c) - $g * .5);
+        
+        @if $g != 0% { gap: $g; }
+    }
+
+    @mixin gtr($r: 1, $g: 0%) // rows, gap
+    {
+        grid-template-rows: repeat($r, math.div(100%, $r) - $g * .5);
+        gap               : $g;
+    }
+
+    @mixin placement($p: false, $t: false, $r: false, $b: false, $l: false, $z: false, $x: false, $y: false, $pe: false) // position, top, right, bottom, left, z-index, pseudo-element (content)
+    {
+        @if $pe { content : $pe; }
+        @if $p  { position: $p ; }
+        @if $t  { top     : $t ; }
+        @if $r  { right   : $r ; }
+        @if $b  { bottom  : $b ; }
+        @if $l  { left    : $l ; }
+        @if $z  { z-index : $z ; }
+
+        @if      $x and $y { transform: translate ($x, $y); }
+        @else if $x        { transform: translateX($x    ); }
+        @else if        $y { transform: translateY(    $y); }
+    }
+
+
+/* #\-PLACEHOLDERS-\ */
+
+    /* --* */
+    @each $name, $property, $value in $placeholders { %#{$name} { #{$property}: #{$value}; } }
+
+    %no_drag
+    {
+        -webkit-user-drag : none   ;
+        -webkit-app-region: no-drag;
+    }
+
+
+/* #\-THIS-\ */

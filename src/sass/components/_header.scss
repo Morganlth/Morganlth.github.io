@@ -1,0 +1,53 @@
+/*----------------------------------------------- #||--header--|| */
+
+
+/* #\-USES-\ */
+
+    /* --SASS */
+
+    /* --GLOBAL */
+    @use '../global/vars'   as *;
+    @use '../global/colors' as *;
+
+    /* --DEPENDENCIES */
+    @use '../utils/font';
+
+    /* --MEDIA */
+    @use '../media/media';
+
+
+/* #\-EXPORTS-\ */
+
+    /* --THIS */
+
+
+/* #\-VARIABLES-\ */
+
+    /* --* */
+
+
+/* #\-FUNCTIONS-\ */
+
+    /* --* */
+
+
+/* #\-MIXINS-\ */
+
+    /* --* */
+
+
+/* #\-PLACEHOLDERS-\ */
+
+    /* --* */
+
+
+/* #\-THIS-\ */
+
+#header
+{
+    .back i { font-size: font.getSize(3); }
+
+    @include media.mobile { box-shadow: 0 2px 4px rgba($drk3, .15); }
+
+    @include media.desktop { height: 9.6rem; }
+}
