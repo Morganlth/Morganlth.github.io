@@ -8,6 +8,7 @@
     /* --GLOBAL */
 
     /* --DEPENDENCIES */
+    @use '../utils/utils';
 
     /* --MEDIA */
 
@@ -45,28 +46,33 @@
 
     cursor: pointer;
 
-    input[type="checkbox"]:checked + i.fa-regular, i.fa-solid { opacity: 0; }
+    input[type="checkbox"]:checked + i.fa-regular, i.fa-solid { @extend %o_0; }
 
-    input[type="checkbox"]:checked + i.fa-regular
-    {
-        transform: scale(3);
+    // input[type="checkbox"]:checked + i.fa-regular
+    // {
+    //     transform: scale(3);
 
-        transition: opacity .26s, transform .28s ease-out;
-    }
+    //     transition: opacity .26s, transform .28s ease-out;
+    // }
 
     input[type="checkbox"]:checked + i.fa-regular + i.fa-solid
     {
-        transform: scale(1);
+        @extend %o_1;
 
-        opacity: 1;
+        // transform: scale(1);
     }
 
-    i.fa-solid
+    i
     {
-        transform: scale(-1);
+        transition: opacity .16s;
 
-        background-clip: text;
-
-        transition: opacity .34s, transform .36s ease-out;
+        &.fa-solid
+        {
+            // transform: scale(-1);
+    
+            background-clip: text;
+    
+            // transition: opacity .34s, transform .36s ease-out;
+        }
     }
 }

@@ -282,11 +282,11 @@ html::before, .z_-1 {
   padding-left: 4.2rem;
 }
 
-html::before, .o_0, .button::after {
+html::before, .o_0, .heart input[type=checkbox]:checked + i.fa-regular, .heart i.fa-solid, .button::after {
   opacity: 0;
 }
 
-.o_1, .button:hover::after {
+.o_1, .heart input[type=checkbox]:checked + i.fa-regular + i.fa-solid, .button:hover::after {
   opacity: 1;
 }
 
@@ -660,6 +660,7 @@ html a:not(a[draggable]), html img {
   }
 }
 
+/* --DEPENDENCIES */
 /*----------------------------------------------- #||--heart--|| */
 /* #\-USES-\ */
 /* --SASS */
@@ -681,21 +682,11 @@ html a:not(a[draggable]), html img {
   font-size: 2.2rem;
   cursor: pointer;
 }
-.heart input[type=checkbox]:checked + i.fa-regular, .heart i.fa-solid {
-  opacity: 0;
-}
-.heart input[type=checkbox]:checked + i.fa-regular {
-  transform: scale(3);
-  transition: opacity 0.26s, transform 0.28s ease-out;
-}
-.heart input[type=checkbox]:checked + i.fa-regular + i.fa-solid {
-  transform: scale(1);
-  opacity: 1;
+.heart i {
+  transition: opacity 0.16s;
 }
 .heart i.fa-solid {
-  transform: scale(-1);
   background-clip: text;
-  transition: opacity 0.34s, transform 0.36s ease-out;
 }
 
 /* --HOME */
