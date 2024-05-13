@@ -902,6 +902,9 @@ html a:not(a[draggable]), html img {
   width: 4.2rem;
   border-bottom: solid 0.3rem;
 }
+#menu .content article h3, #menu .content article p {
+  text-overflow: ellipsis;
+}
 #menu .content article .price {
   align-self: end;
 }

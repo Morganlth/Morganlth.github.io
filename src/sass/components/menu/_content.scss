@@ -67,6 +67,8 @@
             border-bottom: solid $g1;
         }
 
+        h3, p { text-overflow: ellipsis; }
+
         .price { align-self: end; }
     }
 
