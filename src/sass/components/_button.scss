@@ -6,8 +6,10 @@
     /* --SASS */
 
     /* --GLOBAL */
+    @use '../global/colors' as *;
 
     /* --DEPENDENCIES */
+    @use '../utils/utils';
 
     /* --MEDIA */
 
@@ -20,6 +22,7 @@
 /* #\-VARIABLES-\ */
 
     /* --* */
+    $d: .28s;
 
 
 /* #\-FUNCTIONS-\ */
@@ -41,7 +44,29 @@
 
 .button
 {
+    &, &::after
+    {
+        transition-duration       : .28s;
+        transition-timing-function: ease-out;
+    }
+
     min-width: 18.6rem;
 
-    // &:hover
+    transition-property: box-shadow;
+
+    &::after
+    {
+        @include utils.constructor(c_void, p_abs, t_0, r_0, l_0, w_any, h_any, o_0);
+
+        background-color: rgba($lgh1, .15);
+
+        transition-property: opacity;
+    }
+
+    &:hover
+    {
+        &::after { @extend %o_1; }
+
+        box-shadow: 0 4px 15px rgba($drk3, .35);
+    }
 }

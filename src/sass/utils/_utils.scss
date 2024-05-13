@@ -27,6 +27,9 @@
     /* --* */
     $placeholders:
     (
+        // CONTENT
+        'c_void' content '""',
+    
         // DISPLAY
         'd_non' display none        ,
         'd_cts' display contents    ,
@@ -127,7 +130,7 @@
         // 'h_lvh' height 100lvh     ,
         // 'h_svh' height 100svh     ,
         // 'h_dvh' height 100dvh     ,
-        // 'h_any' height 100%       ,
+        'h_any' height 100%       ,
         'h_fit' height fit-content,
 
         // 'min_h_ful' min-height 100vh,
@@ -194,7 +197,7 @@
 
         // OPACITY
         'o_0' opacity 0,
-        // 'o_1' opacity 1,
+        'o_1' opacity 1,
 
         // BOX
         'b_brd' box-sizing border-box ,

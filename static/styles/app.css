@@ -58,6 +58,10 @@
 /* --* */
 /* #\-PLACEHOLDERS-\ */
 /* --* */
+.c_void, .button::after {
+  content: "";
+}
+
 .d_non {
   display: none;
 }
@@ -118,7 +122,7 @@
   gap: 4.2rem;
 }
 
-html::before, .p_abs, #menu .content::before, #menu .content article h2::after {
+html::before, .p_abs, #menu .content::before, #menu .content article h2::after, .button::after {
   position: absolute;
 }
 
@@ -126,11 +130,11 @@ html::before, .p_abs, #menu .content::before, #menu .content article h2::after {
   position: relative;
 }
 
-html::before, .t_0, #menu .content::before {
+html::before, .t_0, #menu .content::before, .button::after {
   top: 0;
 }
 
-.r_0, #menu .content::before {
+.r_0, #menu .content::before, .button::after {
   right: 0;
 }
 
@@ -138,7 +142,7 @@ html::before, .t_0, #menu .content::before {
   bottom: 0;
 }
 
-html::before, .l_0, #menu .content::before, #menu .content article h2::after {
+html::before, .l_0, #menu .content::before, #menu .content article h2::after, .button::after {
   left: 0;
 }
 
@@ -166,12 +170,16 @@ html::before, .z_-1 {
   overflow: hidden auto;
 }
 
-.w_any, #menu .content::before {
+.w_any, #menu .content::before, .button::after {
   width: 100%;
 }
 
 .w_fit {
   width: fit-content;
+}
+
+.h_any, .button::after {
+  height: 100%;
 }
 
 .h_fit {
@@ -274,8 +282,12 @@ html::before, .z_-1 {
   padding-left: 4.2rem;
 }
 
-html::before, .o_0 {
+html::before, .o_0, .button::after {
   opacity: 0;
+}
+
+.o_1, .button:hover::after {
+  opacity: 1;
 }
 
 .b_brd {
@@ -528,6 +540,7 @@ html a:not(a[draggable]), html img {
 /* #\-THIS-\ */
 /* --COMPONENTS */
 /* --GLOBAL */
+/* --DEPENDENCIES */
 /*----------------------------------------------- #||--button--|| */
 /* #\-USES-\ */
 /* --SASS */
@@ -547,8 +560,19 @@ html a:not(a[draggable]), html img {
 /* #\-THIS-\ */
 .button {
   min-width: 18.6rem;
+  transition-property: box-shadow;
 }
-
+.button, .button::after {
+  transition-duration: 0.28s;
+  transition-timing-function: ease-out;
+}
+.button::after {
+  background-color: rgba(255, 255, 255, 0.15);
+  transition-property: opacity;
+}
+.button:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
 /*----------------------------------------------- #||--app--|| */
 /* #\-USES-\ */
 /* --SASS */
