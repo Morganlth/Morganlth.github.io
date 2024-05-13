@@ -58,7 +58,7 @@
 /* --* */
 /* #\-PLACEHOLDERS-\ */
 /* --* */
-.c_void, .button::after {
+.c_void, #menu .content::before, #menu .content .container h2::after, .button::after {
   content: "";
 }
 
@@ -122,7 +122,7 @@
   gap: 4.2rem;
 }
 
-html::before, .p_abs, #menu .content::before, #menu .content article h2::after, .button::after {
+html::before, .p_abs, #menu .content::before, #menu .content .container h2::after, .button::after {
   position: absolute;
 }
 
@@ -138,11 +138,11 @@ html::before, .t_0, #menu .content::before, .button::after {
   right: 0;
 }
 
-.b_0, #menu .content article h2::after {
+.b_0, #menu .content .container h2::after {
   bottom: 0;
 }
 
-html::before, .l_0, #menu .content::before, #menu .content article h2::after, .button::after {
+html::before, .l_0, #menu .content::before, #menu .content .container h2::after, .button::after {
   left: 0;
 }
 
@@ -394,7 +394,7 @@ html::before, .o_0, .heart input[type=checkbox]:checked + i.fa-regular, .heart i
   border-color: #9356DC    !important;
 }
 
-.brd_c_scd1, #menu .content article h2::after {
+.brd_c_scd1, #menu .content .container h2::after {
   border-color: #99E2D0    !important;
 }
 
@@ -890,23 +890,43 @@ html a:not(a[draggable]), html img {
 /* #\-PLACEHOLDERS-\ */
 /* --* */
 /* #\-THIS-\ */
-#menu .content::before, #menu .content article h2::after {
-  content: "";
-}
 #menu .content::before {
   height: 4.2rem;
   border-top-left-radius: 4.2rem;
   border-top-right-radius: 4.2rem;
 }
-#menu .content article h2::after {
+#menu .content .container h2::after {
   width: 4.2rem;
   border-bottom: solid 0.3rem;
 }
-#menu .content article h3, #menu .content article p {
+#menu .content .container label {
+  cursor: pointer;
+}
+#menu .content .container input[type=checkbox]:checked ~ .checked {
+  width: 59px;
+}
+#menu .content .container input[type=checkbox]:checked ~ .checked > div {
+  transform: translateX(0);
+}
+#menu .content .container h3, #menu .content .container p {
   text-overflow: ellipsis;
 }
-#menu .content article .price {
+#menu .content .container .price {
   align-self: end;
+}
+#menu .content .container .checked {
+  transition-property: width;
+}
+#menu .content .container .checked, #menu .content .container .checked > div {
+  width: 0;
+  transition-duration: 0.26s;
+  transition-timing-function: ease-out;
+}
+#menu .content .container .checked > div {
+  transform: translateX(100%);
+  width: 59px;
+  font-size: 2rem;
+  transition-property: transform;
 }
 @media screen and (min-width: 1440px) and (min-height: 425px) {
   #menu .content {

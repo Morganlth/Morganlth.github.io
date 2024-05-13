@@ -23,6 +23,7 @@
 /* #\-VARIABLES-\ */
 
     /* --* */
+    $checked_WIDTH: 59px;
 
 
 /* #\-FUNCTIONS-\ */
@@ -44,11 +45,9 @@
 
 #menu .content
 {
-    &::before, article h2::after { content: ''; }
-
     &::before
     {
-        @include utils.constructor(p_abs, t_0, r_0, l_0, t_y-100, w_any, b_lgh2);
+        @include utils.constructor(c_void, p_abs, t_0, r_0, l_0, t_y-100, w_any, b_lgh2);
 
         height: $g5;
 
@@ -56,20 +55,54 @@
         border-top-right-radius: $g5;
     }
 
-    article
+    .container
     {
         h2::after
         {
-            @include utils.constructor(p_abs, b_0, l_0, brd_c_scd1);
+            @include utils.constructor(c_void, p_abs, b_0, l_0, brd_c_scd1);
 
             width: $g5;
 
             border-bottom: solid $g1;
         }
 
+        label { cursor: pointer; }
+
+        input[type="checkbox"]:checked ~ .checked
+        {
+            width: $checked_WIDTH;
+
+            &>div { transform: translateX(0); }
+        }
+
         h3, p { text-overflow: ellipsis; }
 
         .price { align-self: end; }
+
+        .checked
+        {
+            &, &>div
+            {
+                width: 0;
+
+                transition-duration       : .26s;
+                transition-timing-function: ease-out;
+            }
+
+            // In terms of performance and SEO, it's a bad idea to use properties that modify dimensions (such as width), but for this animation, I can't use transformations because the surrounding elements must also be affected.
+            transition-property: width;
+
+            &>div
+            {
+                transform: translateX(100%);
+        
+                width: $checked_WIDTH;
+    
+                font-size: 2rem;
+
+                transition-property: transform;
+            }
+        }
     }
 
     @include media.desktop
