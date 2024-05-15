@@ -122,6 +122,10 @@
   gap: 4.2rem;
 }
 
+.p_fxd {
+  position: fixed;
+}
+
 html::before, .p_abs, #restaurant .form::before, #restaurant .form .container h2::after, .button::after {
   position: absolute;
 }
@@ -154,6 +158,10 @@ html::before, .z_-1 {
   z-index: 1;
 }
 
+.z_2 {
+  z-index: 2;
+}
+
 .t_x-50 {
   transform: translateX(-50%);
 }
@@ -176,6 +184,10 @@ html::before, .z_-1 {
 
 .w_fit {
   width: fit-content;
+}
+
+.h_ful {
+  height: 100vh;
 }
 
 .h_any, .button::after {
@@ -505,7 +517,7 @@ html a:not(a[draggable]), html img {
 /* --* */
 /* #\-PLACEHOLDERS-\ */
 /* --* */
-.tlt_3, .tlt_5, .txt_3_bld, .txt_4_bld, .txt_1, .txt_2, .txt_3, .txt_2_lgh, .txt_3_lgh, #home .head h1 {
+.tlt_3, .tlt_5, .tlt_6, .txt_3_bld, .txt_4_bld, .txt_1, .txt_2, .txt_3, .txt_2_lgh, .txt_3_lgh, #home .head h1 {
   font-stretch: 100%;
   text-indent: 0;
   font-variant: normal;
@@ -687,6 +699,63 @@ html a:not(a[draggable]), html img {
 }
 .heart i.fa-solid {
   background-clip: text;
+}
+
+/*----------------------------------------------- #||--loader--|| */
+/* #\-USES-\ */
+/* --SASS */
+/* --GLOBAL */
+/* --DEPENDENCIES */
+/* --MEDIA */
+/* #\-EXPORTS-\ */
+/* --THIS */
+/* #\-VARIABLES-\ */
+/* --* */
+/* #\-FUNCTIONS-\ */
+/* --* */
+/* #\-MIXINS-\ */
+/* --* */
+/* #\-PLACEHOLDERS-\ */
+/* --* */
+/* #\-THIS-\ */
+.loader {
+  animation: fade 0.2s 3s ease-out forwards;
+}
+.loader > div {
+  display: inline-grid;
+}
+.loader > div::before, .loader > div::after {
+  content: "Loading...";
+  grid-area: 1/1;
+  mask-size: 10% 100%, 100% 100%;
+  mask-repeat: no-repeat;
+  animation-duration: 0.8s, 0.2s;
+  animation-iteration-count: 4, 16;
+  animation-timing-function: linear, cubic-bezier(0.5, 400, 0.5, -400);
+}
+.loader > div::before {
+  mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  animation-name: scan;
+}
+.loader > div::after {
+  mask-image: linear-gradient(#000 0 0);
+  animation-name: scan, tremor;
+}
+@keyframes scan {
+  100% {
+    mask-position: 100% 0, 0 0;
+  }
+}
+@keyframes tremor {
+  100% {
+    transform: translateY(0.1px);
+  }
+}
+@keyframes fade {
+  100% {
+    opacity: 0;
+  }
 }
 
 /* --HOME */
@@ -1049,6 +1118,13 @@ html::before {
 
 .tlt_5 {
   font-size: 2.8rem;
+  line-height: 1;
+  font-family: "TLT", "sans-serif", "arial";
+  font-weight: normal;
+}
+
+.tlt_6 {
+  font-size: 4rem;
   line-height: 1;
   font-family: "TLT", "sans-serif", "arial";
   font-weight: normal;

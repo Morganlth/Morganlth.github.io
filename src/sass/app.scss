@@ -23,6 +23,7 @@
         @use './components/footer';
         @use './components/header';
         @use './components/heart' ;
+        @use './components/loader';
 
         /* --HOME */
         @use './components/home/head'       ;
@@ -178,6 +179,7 @@ html
  
 .tlt_3 { @include font.tlt($s: 3); }
 .tlt_5 { @include font.tlt($s: 5); }
+.tlt_6 { @include font.tlt($s: 6); }
 
 .txt_3_bld { @include font.txt($s: 3, $t: 'b', $lh: 1  ); }
 .txt_4_bld { @include font.txt($s: 4, $t: 'b', $lh: 1.2); }

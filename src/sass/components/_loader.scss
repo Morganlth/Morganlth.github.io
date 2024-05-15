@@ -1,0 +1,96 @@
+/*----------------------------------------------- #||--loader--|| */
+
+
+/* #\-USES-\ */
+
+    /* --SASS */
+    @use 'sass:math';
+
+    /* --GLOBAL */
+
+    /* --DEPENDENCIES */
+
+    /* --MEDIA */
+
+
+/* #\-EXPORTS-\ */
+
+    /* --THIS */
+
+
+/* #\-VARIABLES-\ */
+
+    /* --* */
+    $fade_DURATION  : .2s;
+    $fade_DELAY     : 3s ;
+    $mask_SIZE      : 10%; // 'Loading...' => 10 letters => 1 letter =~ 10%
+    $scan_DURATION  : .8s;
+    $tremor_DURATION: .2s;
+    $tremor_FORCE   : 400;
+
+
+/* #\-FUNCTIONS-\ */
+
+    /* --* */
+
+
+/* #\-MIXINS-\ */
+
+    /* --* */
+
+
+/* #\-PLACEHOLDERS-\ */
+
+    /* --* */
+
+
+/* #\-THIS-\ */
+
+.loader
+{
+    animation: fade $fade_DURATION $fade_DELAY ease-out forwards;
+
+    &>div
+    {
+        // inpi: https://css-loaders.com/classic/
+    
+        display: inline-grid;
+    
+        &::before,
+        &::after
+        {
+            $fade_DURATION_AND_DELAY: $fade_DURATION + $fade_DELAY;
+
+            content: 'Loading...';
+    
+            grid-area: 1/1;
+        
+            mask-size  : $mask_SIZE 100%, 100% 100%;
+            mask-repeat: no-repeat;
+    
+            animation-duration       : $scan_DURATION, $tremor_DURATION;
+            animation-iteration-count: math.div($fade_DURATION_AND_DELAY, $scan_DURATION), math.div($fade_DURATION_AND_DELAY, $tremor_DURATION); // here, I'm repeating the animations according to how long the loader is displayed. In a real application, it seems logical to remove the loader with JS once the page has been loaded.
+            animation-timing-function: linear, cubic-bezier(.5, $tremor_FORCE, .5, $tremor_FORCE*-1);
+        }
+    
+        &::before
+        {
+            mask-image    : linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+            mask-composite: exclude;
+    
+            animation-name: scan;
+        }
+        &::after
+        {
+            mask-image: linear-gradient(#000 0 0);
+        
+            animation-name: scan, tremor;
+        }
+        
+        @keyframes scan   { 100% { mask-position: 100% 0, 0 0; } }
+    
+        @keyframes tremor { 100% {transform: translateY(.1px); } }
+    }
+
+    @keyframes fade { 100% { opacity: 0; } }
+}
