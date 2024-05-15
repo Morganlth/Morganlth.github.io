@@ -30,9 +30,9 @@
         @use './components/home/restaurants';
         @use './components/home/tuto'       ;
 
-        /* --MENU */
-        @use './components/menu/banner';
-        @use './components/menu/form'  ;
+        /* --RESTAURANTS */
+        @use './components/restaurants/banner';
+        @use './components/restaurants/form'  ;
 
 
 /* #\-EXPORTS-\ */
