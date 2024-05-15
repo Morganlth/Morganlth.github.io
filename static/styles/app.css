@@ -162,6 +162,10 @@ html::before, .z_-1 {
   z-index: 2;
 }
 
+.t_y100 {
+  transform: translateY(100%);
+}
+
 .t_x-50 {
   transform: translateX(-50%);
 }
@@ -974,8 +978,51 @@ html a:not(a[draggable]), html img {
   width: 4.2rem;
   border-bottom: solid 0.3rem;
 }
+#restaurant .form .container.c1 label:nth-child(2) {
+  animation-delay: 0.4s;
+}
+#restaurant .form .container.c1 label:nth-child(3) {
+  animation-delay: 0.6s;
+}
+#restaurant .form .container.c1 label:nth-child(4) {
+  animation-delay: 0.8s;
+}
+#restaurant .form .container.c1 label:nth-child(5) {
+  animation-delay: 1s;
+}
+#restaurant .form .container.c2 label:nth-child(2) {
+  animation-delay: 1.2s;
+}
+#restaurant .form .container.c2 label:nth-child(3) {
+  animation-delay: 1.4s;
+}
+#restaurant .form .container.c2 label:nth-child(4) {
+  animation-delay: 1.6s;
+}
+#restaurant .form .container.c2 label:nth-child(5) {
+  animation-delay: 1.8s;
+}
+#restaurant .form .container.c3 label:nth-child(2) {
+  animation-delay: 2s;
+}
+#restaurant .form .container.c3 label:nth-child(3) {
+  animation-delay: 2.2s;
+}
+#restaurant .form .container.c3 label:nth-child(4) {
+  animation-delay: 2.4s;
+}
+#restaurant .form .container.c3 label:nth-child(5) {
+  animation-delay: 2.6s;
+}
 #restaurant .form .container label {
   cursor: pointer;
+  animation: fly 0.4s ease-out forwards;
+}
+@keyframes fly {
+  100% {
+    transform: none;
+    opacity: 1;
+  }
 }
 #restaurant .form .container input[type=checkbox]:checked ~ .checked {
   width: 59px;

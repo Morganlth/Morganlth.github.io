@@ -23,7 +23,10 @@
 /* #\-VARIABLES-\ */
 
     /* --* */
-    $checked_WIDTH: 59px;
+    $label_MAX     : 4   ; // normally we would calculate the number of children with JS
+    $label_DELAY   : .2s ;
+    $label_DURATION: .4s ;
+    $checked_WIDTH : 59px;
 
 
 /* #\-FUNCTIONS-\ */
@@ -66,7 +69,27 @@
             border-bottom: solid $g1;
         }
 
-        label { cursor: pointer; }
+        // added a delay to each label according to its position in the menu
+        // I start the iteration of j at 2 because my .container contains a title
+        //                         class    {                                         label:nth-child(j)     { animation-delay: delay                                                   ; } 
+        @for $i from 1 through 3 { &.c#{$i} { @for $j from 2 through $label_MAX + 1 { label:nth-child(#{$j}) { animation-delay: $label_DELAY * $label_MAX * ($i - 1) + $label_DELAY * $j; } } } }
+    
+        label
+        {
+            cursor: pointer;
+
+            animation: fly .4s ease-out forwards;
+
+            @keyframes fly
+            {
+                100%
+                {
+                    transform: none;
+
+                    opacity: 1;
+                }
+            }
+        }
 
         input[type="checkbox"]:checked ~ .checked
         {
