@@ -719,10 +719,11 @@ html a:not(a[draggable]), html img {
 /* --* */
 /* #\-THIS-\ */
 .loader {
-  animation: fade 0.2s 3s ease-out forwards;
+  animation: fade_out 0.2s 3s ease-out forwards;
 }
 .loader > div {
   display: inline-grid;
+  animation: fade_in 0.2s;
 }
 .loader > div::before, .loader > div::after {
   content: "Loading...";
@@ -742,6 +743,16 @@ html a:not(a[draggable]), html img {
   mask-image: linear-gradient(#000 0 0);
   animation-name: scan, tremor;
 }
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes fade_out {
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes scan {
   100% {
     mask-position: 100% 0, 0 0;
@@ -750,11 +761,6 @@ html a:not(a[draggable]), html img {
 @keyframes tremor {
   100% {
     transform: translateY(0.1px);
-  }
-}
-@keyframes fade {
-  100% {
-    opacity: 0;
   }
 }
 

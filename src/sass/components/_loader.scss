@@ -22,7 +22,7 @@
 
     /* --* */
     $fade_DURATION  : .2s;
-    $fade_DELAY     : 3s ;
+    $fadeout_DELAY  : 3s ;
     $mask_SIZE      : 10%; // 'Loading...' => 10 letters => 1 letter =~ 10%
     $scan_DURATION  : .8s;
     $tremor_DURATION: .2s;
@@ -48,18 +48,20 @@
 
 .loader
 {
-    animation: fade $fade_DURATION $fade_DELAY ease-out forwards;
+    animation: fade_out $fade_DURATION $fadeout_DELAY ease-out forwards;
 
     &>div
     {
         // inpi: https://css-loaders.com/classic/
     
         display: inline-grid;
+
+        animation: fade_in $fade_DURATION;
     
         &::before,
         &::after
         {
-            $fade_DURATION_AND_DELAY: $fade_DURATION + $fade_DELAY;
+            $fade_DURATION_AND_DELAY: $fade_DURATION + $fadeout_DELAY;
 
             content: 'Loading...';
     
@@ -86,11 +88,13 @@
         
             animation-name: scan, tremor;
         }
-        
-        @keyframes scan   { 100% { mask-position: 100% 0, 0 0; } }
-    
-        @keyframes tremor { 100% {transform: translateY(.1px); } }
     }
 
-    @keyframes fade { 100% { opacity: 0; } }
+    @keyframes fade_in  { 0%   { opacity: 0; } }
+
+    @keyframes fade_out { 100% { opacity: 0; } }
+
+    @keyframes scan     { 100% { mask-position: 100% 0, 0 0; } }
+    
+    @keyframes tremor   { 100% {transform: translateY(.1px); } }
 }
