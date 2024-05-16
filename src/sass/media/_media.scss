@@ -7,17 +7,6 @@
     @use 'sass:list';
     @use 'sass:map' ;
 
-    /* --GLOBAL */
-
-    /* --DEPENDENCIES */
-
-    /* --MEDIA */
-
-
-/* #\-EXPORTS-\ */
-
-    /* --THIS */
-
 
 /* #\-VARIABLES-\ */
 
@@ -151,11 +140,3 @@
     
         @include m(getBreakpoint($frontier_POINT_WIDTH_2), getBreakpoint($frontier_POINT_HEIGHT), $t, $or) { @content; }
     }
-
-
-/* #\-PLACEHOLDERS-\ */
-
-    /* --* */
-
-
-/* #\-THIS-\ */

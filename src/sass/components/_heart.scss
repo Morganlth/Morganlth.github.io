@@ -3,39 +3,8 @@
 
 /* #\-USES-\ */
 
-    /* --SASS */
-
-    /* --GLOBAL */
-
     /* --DEPENDENCIES */
     @use '../utils/utils';
-
-    /* --MEDIA */
-
-
-/* #\-EXPORTS-\ */
-
-    /* --THIS */
-
-
-/* #\-VARIABLES-\ */
-
-    /* --* */
-
-
-/* #\-FUNCTIONS-\ */
-
-    /* --* */
-
-
-/* #\-MIXINS-\ */
-
-    /* --* */
-
-
-/* #\-PLACEHOLDERS-\ */
-
-    /* --* */
 
 
 /* #\-THIS-\ */
@@ -48,31 +17,12 @@
 
     input[type="checkbox"]:checked + i.fa-regular, i.fa-solid { @extend %o_0; }
 
-    // input[type="checkbox"]:checked + i.fa-regular
-    // {
-    //     transform: scale(3);
-
-    //     transition: opacity .26s, transform .28s ease-out;
-    // }
-
-    input[type="checkbox"]:checked + i.fa-regular + i.fa-solid
-    {
-        @extend %o_1;
-
-        // transform: scale(1);
-    }
+    input[type="checkbox"]:checked + i.fa-regular + i.fa-solid { @extend %o_1; }
 
     i
     {
-        transition: opacity .16s;
+        transition: opacity .2s;
 
-        &.fa-solid
-        {
-            // transform: scale(-1);
-    
-            background-clip: text;
-    
-            // transition: opacity .34s, transform .36s ease-out;
-        }
+        &.fa-solid { background-clip: text; }
     }
 }

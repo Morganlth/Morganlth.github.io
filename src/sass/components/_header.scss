@@ -3,8 +3,6 @@
 
 /* #\-USES-\ */
 
-    /* --SASS */
-
     /* --GLOBAL */
     @use '../global/vars'   as *;
     @use '../global/colors' as *;
@@ -14,31 +12,6 @@
 
     /* --MEDIA */
     @use '../media/media';
-
-
-/* #\-EXPORTS-\ */
-
-    /* --THIS */
-
-
-/* #\-VARIABLES-\ */
-
-    /* --* */
-
-
-/* #\-FUNCTIONS-\ */
-
-    /* --* */
-
-
-/* #\-MIXINS-\ */
-
-    /* --* */
-
-
-/* #\-PLACEHOLDERS-\ */
-
-    /* --* */
 
 
 /* #\-THIS-\ */

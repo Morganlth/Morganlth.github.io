@@ -3,8 +3,6 @@
 
 /* #\-USES-\ */
 
-    /* --SASS */
-
     /* --GLOBAL */
     @use '../../global/vars' as *;
 
@@ -15,11 +13,6 @@
     @use '../../media/media';
 
 
-/* #\-EXPORTS-\ */
-
-    /* --THIS */
-
-
 /* #\-VARIABLES-\ */
 
     /* --* */
@@ -27,21 +20,6 @@
     $label_DELAY   : .2s ;
     $label_DURATION: .4s ;
     $checked_WIDTH : 59px;
-
-
-/* #\-FUNCTIONS-\ */
-
-    /* --* */
-
-
-/* #\-MIXINS-\ */
-
-    /* --* */
-
-
-/* #\-PLACEHOLDERS-\ */
-
-    /* --* */
 
 
 /* #\-THIS-\ */

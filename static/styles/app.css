@@ -1,55 +1,20 @@
 /*----------------------------------------------- #||--app--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
 /*----------------------------------------------- #||--vars--|| */
-/* #\-USES-\ */
-/* --SASS */
-/* --GLOBAL */
-/* --DEPENDENCIES */
-/* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
 /* #\-VARIABLES-\ */
 /* --* */
-/* #\-FUNCTIONS-\ */
-/* --* */
-/* #\-MIXINS-\ */
-/* --* */
-/* #\-PLACEHOLDERS-\ */
-/* --* */
-/* #\-THIS-\ */
 /*----------------------------------------------- #||--colors--|| */
-/* #\-USES-\ */
-/* --SASS */
-/* --GLOBAL */
-/* --DEPENDENCIES */
-/* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
 /* #\-VARIABLES-\ */
 /* --* */
-/* #\-FUNCTIONS-\ */
-/* --* */
-/* #\-MIXINS-\ */
-/* --* */
-/* #\-PLACEHOLDERS-\ */
-/* --* */
-/* #\-THIS-\ */
 /* --DEPENDENCIES */
 /*----------------------------------------------- #||--app--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
 /*----------------------------------------------- #||--utils--|| */
 /* #\-USES-\ */
 /* --SASS */
 /* --GLOBAL */
-/* --APP */
-/* --DEPENDENCIES */
-/* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
 /* #\-VARIABLES-\ */
 /* --* */
 /* #\-FUNCTIONS-\ */
@@ -371,63 +336,63 @@ html::before, .o_0, .heart input[type=checkbox]:checked + i.fa-regular, .heart i
 }
 
 .brd_1, .scroll_bar::-webkit-scrollbar-thumb:hover {
-  border: solid 1px  ;
+  border: solid 1px;
 }
 
 .brd_c_lgh1, .scroll_bar.reverse::-webkit-scrollbar-thumb {
-  border-color: #FFFFFF    !important;
+  border-color: #FFFFFF !important;
 }
 
 .brd_c_lgh2 {
-  border-color: #F6F6F6    !important;
+  border-color: #F6F6F6 !important;
 }
 
 .brd_c_drk1 {
-  border-color: #353535    !important;
+  border-color: #353535 !important;
 }
 
 .brd_c_drk2 {
-  border-color: #101010    !important;
+  border-color: #101010 !important;
 }
 
 .brd_c_drk3, .scroll_bar:not(.scroll_bar.reverse)::-webkit-scrollbar-thumb {
-  border-color: #000000    !important;
+  border-color: #000000 !important;
 }
 
 .brd_c_itm1 {
-  border-color: #EAEAEA    !important;
+  border-color: #EAEAEA !important;
 }
 
 .brd_c_itm2 {
-  border-color: #7E7E7E    !important;
+  border-color: #7E7E7E !important;
 }
 
 .brd_c_prm1 {
-  border-color: #FF79DA    !important;
+  border-color: #FF79DA !important;
 }
 
 .brd_c_prm2 {
-  border-color: #9356DC    !important;
+  border-color: #9356DC !important;
 }
 
 .brd_c_scd1, #restaurant .form .container h2::after {
-  border-color: #99E2D0    !important;
+  border-color: #99E2D0 !important;
 }
 
 .brd_c_scd2 {
-  border-color: #008766    !important;
+  border-color: #008766 !important;
 }
 
 .brd_c_trt1 {
-  border-color: #89C8FA    !important;
+  border-color: #89C8FA !important;
 }
 
 .brd_c_trt2 {
-  border-color: #003A68    !important;
+  border-color: #003A68 !important;
 }
 
 .brd_c_idc {
-  border-color: red     !important;
+  border-color: red  !important;
 }
 
 .c_lgh1 {
@@ -503,16 +468,11 @@ html a:not(a[draggable]), html img {
   -webkit-app-region: no-drag;
 }
 
-/* #\-THIS-\ */
 /* --DEPENDENCIES */
 /*----------------------------------------------- #||--font--|| */
 /* #\-USES-\ */
 /* --SASS */
-/* --GLOBAL */
 /* --DEPENDENCIES */
-/* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
 /* #\-VARIABLES-\ */
 /* --* */
 /* #\-FUNCTIONS-\ */
@@ -535,43 +495,24 @@ html a:not(a[draggable]), html img {
   text-rendering: geometricPrecision;
 }
 
-/* #\-THIS-\ */
 /* --MEDIA */
 /*----------------------------------------------- #||--media--|| */
 /* #\-USES-\ */
 /* --SASS */
-/* --GLOBAL */
-/* --DEPENDENCIES */
-/* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
 /* #\-VARIABLES-\ */
 /* --* */
 /* #\-FUNCTIONS-\ */
 /* --* */
 /* #\-MIXINS-\ */
 /* --* */
-/* #\-PLACEHOLDERS-\ */
-/* --* */
-/* #\-THIS-\ */
 /* --COMPONENTS */
 /* --GLOBAL */
 /* --DEPENDENCIES */
 /*----------------------------------------------- #||--button--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
 /* --DEPENDENCIES */
-/* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
 /* #\-VARIABLES-\ */
-/* --* */
-/* #\-FUNCTIONS-\ */
-/* --* */
-/* #\-MIXINS-\ */
-/* --* */
-/* #\-PLACEHOLDERS-\ */
 /* --* */
 /* #\-THIS-\ */
 .button {
@@ -591,25 +532,12 @@ html a:not(a[draggable]), html img {
 }
 /*----------------------------------------------- #||--app--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
 /* --MEDIA */
 /*----------------------------------------------- #||--footer--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
-/* --DEPENDENCIES */
 /* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
-/* #\-VARIABLES-\ */
-/* --* */
-/* #\-FUNCTIONS-\ */
-/* --* */
-/* #\-MIXINS-\ */
-/* --* */
-/* #\-PLACEHOLDERS-\ */
-/* --* */
 /* #\-THIS-\ */
 #footer {
   gap: 2.2rem 10rem;
@@ -642,25 +570,13 @@ html a:not(a[draggable]), html img {
 
 /*----------------------------------------------- #||--app--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
 /* --MEDIA */
 /*----------------------------------------------- #||--header--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
 /* --DEPENDENCIES */
 /* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
-/* #\-VARIABLES-\ */
-/* --* */
-/* #\-FUNCTIONS-\ */
-/* --* */
-/* #\-MIXINS-\ */
-/* --* */
-/* #\-PLACEHOLDERS-\ */
-/* --* */
 /* #\-THIS-\ */
 #header .back i {
   font-size: 1.8rem;
@@ -679,27 +595,14 @@ html a:not(a[draggable]), html img {
 /* --DEPENDENCIES */
 /*----------------------------------------------- #||--heart--|| */
 /* #\-USES-\ */
-/* --SASS */
-/* --GLOBAL */
 /* --DEPENDENCIES */
-/* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
-/* #\-VARIABLES-\ */
-/* --* */
-/* #\-FUNCTIONS-\ */
-/* --* */
-/* #\-MIXINS-\ */
-/* --* */
-/* #\-PLACEHOLDERS-\ */
-/* --* */
 /* #\-THIS-\ */
 .heart {
   font-size: 2.2rem;
   cursor: pointer;
 }
 .heart i {
-  transition: opacity 0.16s;
+  transition: opacity 0.2s;
 }
 .heart i.fa-solid {
   background-clip: text;
@@ -708,18 +611,7 @@ html a:not(a[draggable]), html img {
 /*----------------------------------------------- #||--loader--|| */
 /* #\-USES-\ */
 /* --SASS */
-/* --GLOBAL */
-/* --DEPENDENCIES */
-/* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
 /* #\-VARIABLES-\ */
-/* --* */
-/* #\-FUNCTIONS-\ */
-/* --* */
-/* #\-MIXINS-\ */
-/* --* */
-/* #\-PLACEHOLDERS-\ */
 /* --* */
 /* #\-THIS-\ */
 .loader {
@@ -772,20 +664,8 @@ html a:not(a[draggable]), html img {
 /* --MEDIA */
 /*----------------------------------------------- #||--head--|| */
 /* #\-USES-\ */
-/* --SASS */
-/* --GLOBAL */
 /* --DEPENDENCIES */
 /* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
-/* #\-VARIABLES-\ */
-/* --* */
-/* #\-FUNCTIONS-\ */
-/* --* */
-/* #\-MIXINS-\ */
-/* --* */
-/* #\-PLACEHOLDERS-\ */
-/* --* */
 /* #\-THIS-\ */
 #home .head h1 {
   line-height: 1.2;
@@ -806,25 +686,12 @@ html a:not(a[draggable]), html img {
 
 /*----------------------------------------------- #||--app--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
 /* --MEDIA */
 /*----------------------------------------------- #||--location--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
-/* --DEPENDENCIES */
 /* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
-/* #\-VARIABLES-\ */
-/* --* */
-/* #\-FUNCTIONS-\ */
-/* --* */
-/* #\-MIXINS-\ */
-/* --* */
-/* #\-PLACEHOLDERS-\ */
-/* --* */
 /* #\-THIS-\ */
 #home .location {
   height: 5.4rem;
@@ -837,25 +704,12 @@ html a:not(a[draggable]), html img {
 
 /*----------------------------------------------- #||--app--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
 /* --MEDIA */
 /*----------------------------------------------- #||--restaurants--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
-/* --DEPENDENCIES */
 /* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
-/* #\-VARIABLES-\ */
-/* --* */
-/* #\-FUNCTIONS-\ */
-/* --* */
-/* #\-MIXINS-\ */
-/* --* */
-/* #\-PLACEHOLDERS-\ */
-/* --* */
 /* #\-THIS-\ */
 #home .restaurants .wrapper .card img {
   aspect-ratio: 16/8;
@@ -881,24 +735,13 @@ html a:not(a[draggable]), html img {
 
 /*----------------------------------------------- #||--app--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
 /* --MEDIA */
 /*----------------------------------------------- #||--tuto--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
-/* --DEPENDENCIES */
 /* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
 /* #\-VARIABLES-\ */
-/* --* */
-/* #\-FUNCTIONS-\ */
-/* --* */
-/* #\-MIXINS-\ */
-/* --* */
-/* #\-PLACEHOLDERS-\ */
 /* --* */
 /* #\-THIS-\ */
 #home .tuto .bubble {
@@ -925,21 +768,6 @@ html a:not(a[draggable]), html img {
 
 /* --RESTAURANTS */
 /*----------------------------------------------- #||--banner--|| */
-/* #\-USES-\ */
-/* --SASS */
-/* --GLOBAL */
-/* --DEPENDENCIES */
-/* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
-/* #\-VARIABLES-\ */
-/* --* */
-/* #\-FUNCTIONS-\ */
-/* --* */
-/* #\-MIXINS-\ */
-/* --* */
-/* #\-PLACEHOLDERS-\ */
-/* --* */
 /* #\-THIS-\ */
 #restaurant .banner img {
   aspect-ratio: 15/11;
@@ -948,25 +776,15 @@ html a:not(a[draggable]), html img {
 
 /*----------------------------------------------- #||--app--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
 /* --DEPENDENCIES */
 /* --MEDIA */
 /*----------------------------------------------- #||--form--|| */
 /* #\-USES-\ */
-/* --SASS */
 /* --GLOBAL */
 /* --DEPENDENCIES */
 /* --MEDIA */
-/* #\-EXPORTS-\ */
-/* --THIS */
 /* #\-VARIABLES-\ */
-/* --* */
-/* #\-FUNCTIONS-\ */
-/* --* */
-/* #\-MIXINS-\ */
-/* --* */
-/* #\-PLACEHOLDERS-\ */
 /* --* */
 /* #\-THIS-\ */
 #restaurant .form::before {
@@ -1060,14 +878,6 @@ html a:not(a[draggable]), html img {
   }
 }
 
-/* #\-EXPORTS-\ */
-/* --THIS */
-/* #\-VARIABLES-\ */
-/* --* */
-/* #\-FUNCTIONS-\ */
-/* --* */
-/* #\-MIXINS-\ */
-/* --* */
 /* #\-PLACEHOLDERS-\ */
 /* --* */
 html body, html h1, html h2, html h3, html h4, html h5, html h6, html ul, html ol, html p, html figure, html blockquote, html pre, html form, html select, html option {

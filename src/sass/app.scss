@@ -3,8 +3,6 @@
 
 /* #\-USES-\ */
 
-    /* --SASS */
-
     /* --GLOBAL */
     @use './global/vars'   as *;
     @use './global/colors' as *;
@@ -34,25 +32,6 @@
         /* --RESTAURANTS */
         @use './components/restaurants/banner';
         @use './components/restaurants/form'  ;
-
-
-/* #\-EXPORTS-\ */
-
-    /* --THIS */
-
-
-/* #\-VARIABLES-\ */
-
-    /* --* */
-
-/* #\-FUNCTIONS-\ */
-
-    /* --* */
-
-
-/* #\-MIXINS-\ */
-
-    /* --* */
 
 
 /* #\-PLACEHOLDERS-\ */
@@ -93,20 +72,7 @@
 
         &:not(&.o_hid) { overflow: hidden overlay !important; }
 
-        // @include media.mobile
-        // {
-        //     font-size: 46.875%; // 1.6rem => 12px
-        // }
-
-        // @include media.tablet
-        // {
-        //     font-size: 54.6875%; // 1.6rem => 14px
-        // }
-    
-        // @include media.desktop
-        // {
-            font-size: 62.5%; // 1.6rem => 16px
-        // }
+        font-size: 62.5%; // 1.6rem => 16px
     }
 
     %fonts // TLT, TXT_BLD, TXT, TXT_SCD
@@ -190,12 +156,6 @@ html
 
 .txt_2_lgh { @include font.txt($s: 2, $t: 'l', $lh: 1.1); }
 .txt_3_lgh { @include font.txt($s: 3, $t: 'l', $lh: 1.1); }
-
-// .f_bld
-// {
-//     font-family: font.$txt_BLD, font.$txt_DFT;
-//     font-weight: bold                        ;
-// }
 
 .select_txt { &::selection, &>*::selection { @include utils.constructor(b_prm1, c_prm2); } }
 

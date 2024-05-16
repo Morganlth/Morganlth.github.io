@@ -7,17 +7,8 @@
     @use 'sass:map' ;
     @use 'sass:list';
 
-    /* --GLOBAL */
-
     /* --DEPENDENCIES */
     @use './utils';
-
-    /* --MEDIA */
-
-
-/* #\-EXPORTS-\ */
-
-    /* --THIS */
 
 
 /* #\-VARIABLES-\ */
@@ -116,6 +107,3 @@
         font-optical-sizing    : auto;
         text-rendering         : geometricPrecision;
     }
-
-
-/* #\-THIS-\ */
