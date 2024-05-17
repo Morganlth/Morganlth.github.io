@@ -21,11 +21,11 @@
         @use './components/footer';
         @use './components/header';
         @use './components/heart' ;
-        @use './components/loader';
 
         /* --HOME */
         @use './components/home/head'       ;
         @use './components/home/location'   ;
+        @use './components/home/loader'     ;
         @use './components/home/restaurants';
         @use './components/home/tuto'       ;
 

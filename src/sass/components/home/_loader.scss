@@ -51,14 +51,14 @@
     
         &::before
         {
-            mask-image    : linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+            mask-image    : linear-gradient(#000 0 0, #000 0 0), linear-gradient(#000 0 0, #000 0 0);
             mask-composite: exclude;
     
             animation-name: scan;
         }
         &::after
         {
-            mask-image: linear-gradient(#000 0 0);
+            mask-image: linear-gradient(#000 0 0, #000 0 0);
         
             animation-name: scan, tremor;
         }
