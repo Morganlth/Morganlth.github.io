@@ -856,7 +856,7 @@ html a:not(a[draggable]), html img {
 #restaurant .form .container input[type=checkbox]:checked ~ .checked {
   width: 59px;
 }
-#restaurant .form .container input[type=checkbox]:checked ~ .checked > div {
+#restaurant .form .container input[type=checkbox]:checked ~ .checked > span {
   transform: translateX(0);
 }
 #restaurant .form .container h3, #restaurant .form .container p {
@@ -868,12 +868,12 @@ html a:not(a[draggable]), html img {
 #restaurant .form .container .checked {
   transition-property: width;
 }
-#restaurant .form .container .checked, #restaurant .form .container .checked > div {
+#restaurant .form .container .checked, #restaurant .form .container .checked > span {
   width: 0;
   transition-duration: 0.26s;
   transition-timing-function: ease-out;
 }
-#restaurant .form .container .checked > div {
+#restaurant .form .container .checked > span {
   transform: translateX(100%);
   width: 59px;
   font-size: 2rem;

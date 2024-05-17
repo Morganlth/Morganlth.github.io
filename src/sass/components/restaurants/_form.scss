@@ -73,7 +73,7 @@
         {
             width: $checked_WIDTH;
 
-            &>div { transform: translateX(0); }
+            &>span { transform: translateX(0); }
         }
 
         h3, p { text-overflow: ellipsis; }
@@ -82,7 +82,7 @@
 
         .checked
         {
-            &, &>div
+            &, &>span
             {
                 width: 0;
 
@@ -93,7 +93,7 @@
             // In terms of performance and SEO, it's a bad idea to use properties that modify dimensions (such as width), but for this animation, I can't use transformations because the surrounding elements must also be affected.
             transition-property: width;
 
-            &>div
+            &>span
             {
                 transform: translateX(100%);
         
