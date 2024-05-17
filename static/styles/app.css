@@ -35,6 +35,10 @@
   display: contents;
 }
 
+.d_blc {
+  display: block;
+}
+
 .d_flx {
   display: flex;
 }
@@ -708,8 +712,11 @@ html a:not(a[draggable]), html img {
 /* --MEDIA */
 /*----------------------------------------------- #||--restaurants--|| */
 /* #\-USES-\ */
+/* --SASS */
 /* --GLOBAL */
 /* --MEDIA */
+/* #\-VARIABLES-\ */
+/* --* */
 /* #\-THIS-\ */
 #home .restaurants .wrapper .card img {
   aspect-ratio: 16/8;
@@ -718,6 +725,10 @@ html a:not(a[draggable]), html img {
   top: 1.6rem;
   right: 1.6rem;
   border-radius: 2px;
+}
+#home .restaurants .wrapper .card .heart {
+  right: 2.2rem;
+  margin-top: calc(50% + 1.6rem);
 }
 @media screen and (max-width: 767px), screen and (max-height: 424px) {
   #home .restaurants .wrapper .card {
