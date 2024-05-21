@@ -70,5 +70,5 @@
 
     @keyframes scan     { 100% { mask-position: 100% 0, 0 0; } }
     
-    @keyframes tremor   { 100% {transform: translateY(.1px); } }
+    @keyframes tremor   { 100% { transform: translateY(.1px); } }
 }
