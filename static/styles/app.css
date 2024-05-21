@@ -845,6 +845,10 @@ html a:not(a[draggable]), html img {
   cursor: pointer;
   animation: fly 0.4s ease-out forwards;
 }
+#restaurant .form .container label > span:not(.checked) > * {
+  display: block;
+  text-overflow: ellipsis;
+}
 @keyframes fly {
   100% {
     transform: none;
@@ -857,17 +861,14 @@ html a:not(a[draggable]), html img {
 #restaurant .form .container input[type=checkbox]:checked ~ .checked > span {
   transform: translateX(0);
 }
-#restaurant .form .container h3, #restaurant .form .container p {
-  text-overflow: ellipsis;
-}
 #restaurant .form .container .price {
   align-self: end;
 }
 #restaurant .form .container .checked {
+  width: 0;
   transition-property: width;
 }
 #restaurant .form .container .checked, #restaurant .form .container .checked > span {
-  width: 0;
   transition-duration: 0.26s;
   transition-timing-function: ease-out;
 }

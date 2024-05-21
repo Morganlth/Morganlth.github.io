@@ -58,6 +58,13 @@
 
             animation: fly .4s ease-out forwards;
 
+            &>span:not(.checked)>*
+            {
+                display: block;
+        
+                text-overflow: ellipsis;
+            }
+
             @keyframes fly
             {
                 100%
@@ -76,20 +83,18 @@
             &>span { transform: translateX(0); }
         }
 
-        h3, p { text-overflow: ellipsis; }
-
         .price { align-self: end; }
 
         .checked
         {
             &, &>span
             {
-                width: 0;
-
                 transition-duration       : .26s;
                 transition-timing-function: ease-out;
             }
 
+            width: 0;
+    
             // In terms of performance and SEO, it's a bad idea to use properties that modify dimensions (such as width), but for this animation, I can't use transformations because the surrounding elements must also be affected.
             transition-property: width;
 
